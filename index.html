@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Les Fleurs de Nila - Créations florales artisanales à Nîmes. Élégance intemporelle.">
+    <title>Les Fleurs de Nila — Élégance Florale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a365d',
+                        'secondary': '#2d5282',
+                        'accent': '#bee3f8',
+                        'cream': '#fafafa',
+                    },
+                    fontFamily: {
+                        'display': ['Fleur de Leah', 'Georgia', 'serif'],
+                        'sans': ['Georgia', 'Times New Roman', 'serif'],
+                    },
+                    letterSpacing: {
+                        'widest': '0.15em',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-cream antialiased">
+    
+    <!-- Navigation -->
+    <nav id="nav" class="fixed w-full z-50 transition-all duration-500">
+        <div class="w-full grid grid-cols-[40%_60%]">
+            <div class="px-8 lg:px-16 flex items-center h-24">
+                <!-- Logo -->
+                <a href="#" class="transition-opacity hover:opacity-80">
+                    <img src="RoyalBlueText.png" alt="Les Fleurs de Nila" class="h-20 lg:h-24 w-auto">
+                </a>
+            </div>
+            
+            <div class="px-8 lg:px-16 flex items-center justify-end h-24">
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-12 lg:space-x-16">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                    <a href="#collections" class="nav-link">Collections</a>
+                    <a href="#evenementiel" class="nav-link">Événementiel</a>
+                    <a href="#a-propos" class="nav-link">À Propos</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile Fullscreen -->
+    <div id="mobile-menu" class="fixed inset-0 bg-cream z-40 hidden opacity-0 transition-opacity duration-500">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#accueil" class="mobile-nav-link">Accueil</a>
+            <a href="#collections" class="mobile-nav-link">Collections</a>
+            <a href="#evenementiel" class="mobile-nav-link">Événementiel</a>
+            <a href="#a-propos" class="mobile-nav-link">À Propos</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative w-full h-screen flex items-center bg-white overflow-hidden">
+        <div class="w-full h-full flex flex-col lg:flex-row">
+            <!-- Left: Text Content -->
+            <div class="w-full lg:w-1/2 h-full flex items-center justify-center bg-white px-12 lg:px-20 py-20">
+                <div class="max-w-xl space-y-8">
+                    <h1 class="font-display text-7xl md:text-8xl lg:text-[8rem] xl:text-[9rem] text-gray-900 font-light leading-[0.85] tracking-tight">
+                        Fleurs<br>de Nila
+                    </h1>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-gray-700 font-light italic">
+                        Élégance Intemporelle
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed">
+                        Créations florales artisanales<br>
+                        Nîmes, France
+                    </p>
+                    <a href="#collections" class="btn-primary inline-block">
+                        Découvrir
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="w-full lg:w-1/2 h-full overflow-hidden">
+                <img src="closeUP1.jpg" alt="Fleurs de Nila" class="hero-image w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/4 transform -translate-x-1/2 animate-bounce-slow hidden lg:block">
+            <div class="w-px h-16 bg-gray-400 opacity-30"></div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-20 lg:mb-28">
+                <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Nos Créations</p>
+                <h2 class="font-display text-4xl lg:text-6xl text-primary font-light mb-6">Collections</h2>
+                <div class="w-20 h-px bg-accent mx-auto"></div>
+            </div>
+            
+            <!-- Collections Grid -->
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mb-24">
+                <!-- Moment I - Fleurs Fraîches -->
+                <article class="collection-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream">
+                        <img src="bouquet2.jpg" alt="Bouquets Frais" class="parallax-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Moment I</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Fraîcheur Éphémère</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Bouquets de fleurs fraîches sélectionnées avec soin, célébrant la beauté de l'instant présent.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Moment II - Fleurs Séchées -->
+                <article class="collection-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream">
+                        <img src="bouquetSEC.jpg" alt="Compositions Séchées" class="parallax-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Moment II</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Beauté Éternelle</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Compositions de fleurs séchées intemporelles, pour une élégance qui traverse les saisons.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Secondary Grid -->
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Vases & Accessoires -->
+                <article class="collection-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream">
+                        <img src="global1.jpg" alt="Vases & Accessoires" class="parallax-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Moment III</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">L'Art du Détail</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Vases raffinés et accessoires soigneusement choisis pour sublimer vos compositions.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Créations Sur-Mesure -->
+                <article class="collection-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream">
+                        <img src="fleurSpe1.jpg" alt="Créations Sur-Mesure" class="parallax-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Sur-Mesure</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Créations Uniques</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Des compositions personnalisées pensées spécialement pour vous et vos occasions précieuses.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Visuals Carousel Section -->
+    <section class="w-full bg-white py-16 lg:py-20 overflow-hidden">
+        <div class="carousel-container w-[90%] mx-auto">
+            <!-- Slide 1 -->
+            <div class="carousel-slide flex gap-4 lg:gap-6">
+                <div class="w-full md:w-1/3 h-[600px] lg:h-[700px] overflow-hidden rounded-lg">
+                    <img src="aestethic1.jpg" alt="Création florale" class="w-full h-full object-cover hover-zoom">
+                </div>
+                <div class="w-full md:w-1/3 h-[600px] lg:h-[700px] overflow-hidden rounded-lg">
+                    <img src="SecBeau2.jpg" alt="Composition séchée" class="w-full h-full object-cover hover-zoom">
+                </div>
+                <div class="w-full md:w-1/3 h-[600px] lg:h-[700px] overflow-hidden rounded-lg">
+                    <img src="aestethic2.jpg" alt="Bouquet élégant" class="w-full h-full object-cover hover-zoom">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <div class="flex justify-center items-center gap-8 py-12">
+            <button id="carousel-prev" class="carousel-arrow">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <button id="carousel-next" class="carousel-arrow">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 lg:py-32 bg-cream">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Notre Univers</p>
+                <h2 class="font-display text-4xl lg:text-6xl text-primary font-light mb-6">Galerie</h2>
+                <div class="w-20 h-px bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="SecBleu1.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Fleurs Séchées Bleues</p>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="closeUP1.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Détail Florale</p>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="aestethic4.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Composition Artistique</p>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="bouquet2.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Bouquet Frais</p>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="bouquetSEC.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Bouquet Séché Élégant</p>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden gallery-item relative group cursor-pointer">
+                    <img src="global1.jpg" alt="Création" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Vases & Accessoires</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Événementiel Section -->
+    <section id="evenementiel" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Nos Services</p>
+                <h2 class="font-display text-4xl lg:text-6xl text-primary font-light mb-6">Événementiel</h2>
+                <div class="w-20 h-px bg-accent mx-auto mb-8"></div>
+                <p class="text-lg text-gray-700 font-light max-w-3xl mx-auto leading-relaxed">
+                    Sublimez vos événements avec nos créations florales sur-mesure. Mariages, réceptions, événements professionnels : nous donnons vie à vos inspirations.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <div class="overflow-hidden rounded-lg shadow-xl">
+                    <img src="SecEsthétique.png" alt="Décoration événementielle" class="w-full h-[500px] lg:h-[600px] object-cover hover-zoom">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-xl">
+                    <img src="SecEsthétique2.png" alt="Compositions événementielles" class="w-full h-[500px] lg:h-[600px] object-cover hover-zoom">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-primary mb-3">Mariages</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Créations personnalisées pour votre jour unique
+                    </p>
+                </div>
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-primary mb-3">Entreprises</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Décorations florales pour événements professionnels
+                    </p>
+                </div>
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-primary mb-3">Réceptions</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Ambiances florales pour tous vos événements
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À Propos Section -->
+    <section id="a-propos" class="py-24 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Notre Histoire</p>
+                    <h2 class="font-display text-4xl lg:text-5xl text-primary font-light mb-8">À Propos</h2>
+                    <div class="space-y-6 text-gray-700 font-light leading-relaxed">
+                        <p>
+                            Les Fleurs de Nila est né d'une passion pour l'art floral et le désir de créer des compositions qui transcendent le temps.
+                        </p>
+                        <p>
+                            Basés à Nîmes, nous sélectionnons avec soin chaque fleur, qu'elle soit fraîche ou séchée, pour composer des créations uniques qui reflètent votre sensibilité et subliment vos moments précieux.
+                        </p>
+                        <p>
+                            Notre approche artisanale privilégie la qualité, l'authenticité et l'élégance intemporelle. Chaque bouquet est une œuvre unique, pensée pour transmettre des émotions sincères.
+                        </p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="aspect-[3/4] overflow-hidden">
+                        <img src="fleuristeRose.jpg" alt="Atelier" class="parallax-image w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <p class="text-secondary text-sm tracking-widest uppercase mb-8 font-light">Notre Philosophie</p>
+            <blockquote class="font-display text-3xl lg:text-4xl text-primary font-light leading-relaxed italic">
+                "Chaque fleur est une âme à la nature éclose"
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Rendez-nous Visite</p>
+                    <h2 class="font-display text-4xl lg:text-5xl text-primary font-light mb-12">Contact</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-sm tracking-widest uppercase text-secondary mb-2 font-light">Adresse</h3>
+                            <p class="text-gray-700 font-light text-lg">Nîmes, France</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-sm tracking-widest uppercase text-secondary mb-2 font-light">Horaires</h3>
+                            <p class="text-gray-700 font-light text-lg">Mardi — Samedi</p>
+                            <p class="text-gray-700 font-light text-lg">9h00 — 19h00</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-sm tracking-widest uppercase text-secondary mb-2 font-light">Téléphone</h3>
+                            <p class="text-gray-700 font-light text-lg">À venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aspect-[3/4] overflow-hidden lg:sticky lg:top-32">
+                    <img src="chienEtRose.jpg" alt="Ambiance" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="w-full h-[500px] lg:h-[600px]">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.8426771644847!2d4.358892476545686!3d43.83595707109657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42c6e79d9e2af%3A0x8e6e8e6e8e6e8e6e!2s3%20Rue%20Auguste%20Pellet%2C%2030000%20N%C3%AEmes%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-display text-2xl text-primary mb-4">Les Fleurs de Nila</h3>
+                    <p class="text-gray-600 font-light text-sm leading-relaxed">
+                        Créations florales artisanales à Nîmes
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase text-secondary mb-4 font-light">Navigation</h4>
+                    <nav class="space-y-2">
+                        <a href="#accueil" class="block text-gray-600 hover:text-primary transition-colors text-sm">Accueil</a>
+                        <a href="#collections" class="block text-gray-600 hover:text-primary transition-colors text-sm">Collections</a>
+                        <a href="#evenementiel" class="block text-gray-600 hover:text-primary transition-colors text-sm">Événementiel</a>
+                        <a href="#a-propos" class="block text-gray-600 hover:text-primary transition-colors text-sm">À Propos</a>
+                        <a href="#contact" class="block text-gray-600 hover:text-primary transition-colors text-sm">Contact</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase text-secondary mb-4 font-light">Services</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm font-light">
+                        <li>Bouquets frais</li>
+                        <li>Fleurs séchées</li>
+                        <li>Vases & accessoires</li>
+                        <li>Créations sur-mesure</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 pt-8 text-center">
+                <p class="text-gray-500 text-sm font-light">
+                    © 2025 Les Fleurs de Nila — Nîmes, France
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
