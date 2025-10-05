@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // Preload Critical Images
     // ============================================
-    const criticalImages = ['devanture1.jpg', 'fleuristeRose.jpg'];
+    const criticalImages = ['images/devanture1.jpg', 'images/fleuristeRose.jpg'];
     
     criticalImages.forEach(src => {
         const link = document.createElement('link');
@@ -339,19 +339,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     const carouselSlides = [
         [
-            { src: 'aestethic1.jpg', alt: 'Création florale' },
-            { src: 'SecBeau2.jpg', alt: 'Composition séchée' },
-            { src: 'aestethic2.jpg', alt: 'Bouquet élégant' }
+            { src: 'images/aestethic1.jpg', alt: 'Création florale' },
+            { src: 'images/SecBeau2.jpg', alt: 'Composition séchée' },
+            { src: 'images/aestethic2.jpg', alt: 'Bouquet élégant' }
         ],
         [
-            { src: 'SecBleu1.jpg', alt: 'Fleurs bleues séchées' },
-            { src: 'aestethic3.jpg', alt: 'Arrangement artistique' },
-            { src: 'aestethic4.jpg', alt: 'Composition raffinée' }
+            { src: 'images/SecBleu1.jpg', alt: 'Fleurs bleues séchées' },
+            { src: 'images/aestethic3.jpg', alt: 'Arrangement artistique' },
+            { src: 'images/aestethic4.jpg', alt: 'Composition raffinée' }
         ],
         [
-            { src: 'bouquet2.jpg', alt: 'Bouquet frais' },
-            { src: 'bouquetSEC.jpg', alt: 'Bouquet séché' },
-            { src: 'global1.jpg', alt: 'Vue d\'ensemble' }
+            { src: 'images/bouquet2.jpg', alt: 'Bouquet frais' },
+            { src: 'images/bouquetSEC.jpg', alt: 'Bouquet séché' },
+            { src: 'images/global1.jpg', alt: 'Vue d\'ensemble' }
         ]
     ];
 
