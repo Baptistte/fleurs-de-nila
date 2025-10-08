@@ -413,6 +413,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
+    // FAQ Accordion
+    // ============================================
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-icon');
+            const isOpen = !answer.classList.contains('hidden');
+            
+            // Fermer tous les autres items
+            faqQuestions.forEach(q => {
+                const item = q.parentElement;
+                const ans = q.nextElementSibling;
+                const ic = q.querySelector('.faq-icon');
+                
+                if (item !== faqItem) {
+                    ans.classList.add('hidden');
+                    ic.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle l'item actuel
+            if (isOpen) {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(45deg)';
+            }
+        });
+    });
+
+    // ============================================
     // Initial Animation on Load
     // ============================================
     window.addEventListener('load', () => {
