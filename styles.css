@@ -804,3 +804,33 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* ========================================
+   Fix Snipcart Modal Side - Fermeture
+   ======================================== */
+
+/* S'assurer que le site reste visible avec le panier en mode side */
+.snipcart-modal--side {
+    pointer-events: auto !important;
+}
+
+/* S'assurer que l'overlay permet de fermer le panier */
+.snipcart-modal__container {
+    pointer-events: auto !important;
+}
+
+/* Le contenu du site reste cliquable quand le panier est ouvert en mode side */
+body:has(.snipcart-modal--opened) {
+    overflow: auto !important;
+}
+
+/* Améliorer le bouton de fermeture du panier */
+.snipcart-modal__close {
+    cursor: pointer !important;
+    z-index: 99999 !important;
+}
+
+/* Overlay semi-transparent qui permet de fermer en cliquant dessus */
+.snipcart__box--badge-highlight {
+    pointer-events: auto !important;
+}

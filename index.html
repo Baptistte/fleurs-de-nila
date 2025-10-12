@@ -1020,19 +1020,36 @@
     <div id="snipcart" 
          data-api-key="MmVjYTBhZDctM2M3ZC00MGVlLTk2ZDUtY2QyN2FiOWI2MDhiNjM4OTU4NjEzNDI2NTAyMDg0" 
          data-config-modal-style="side"
+         data-config-add-product-behavior="none"
          hidden>
     </div>
     
     <script>
         // Configuration Snipcart pour comportement personnalisé
+        window.SnipcartSettings = {
+            addProductBehavior: 'none', // Ne pas ouvrir le panier automatiquement
+            modalStyle: 'side'
+        };
+        
         document.addEventListener('snipcart.ready', () => {
-            // Ne pas ouvrir automatiquement le panier lors de l'ajout
-            Snipcart.api.configure('show_cart_automatically', false);
-            
             // Écouter l'événement d'ajout au panier
             Snipcart.events.on('item.added', (item) => {
                 // Afficher une notification élégante
                 showAddedNotification(item.name);
+            });
+            
+            // S'assurer que le panier peut se fermer correctement
+            Snipcart.events.on('cart.opened', () => {
+                // Ajouter un gestionnaire pour le bouton de fermeture
+                setTimeout(() => {
+                    const closeButton = document.querySelector('.snipcart-modal__close');
+                    if (closeButton && !closeButton.hasAttribute('data-custom-handler')) {
+                        closeButton.setAttribute('data-custom-handler', 'true');
+                        closeButton.addEventListener('click', (e) => {
+                            Snipcart.api.modal.close();
+                        });
+                    }
+                }, 100);
             });
         });
         
@@ -1059,7 +1076,11 @@
             // Retirer après 3 secondes
             setTimeout(() => {
                 notification.classList.remove('show');
-                setTimeout(() => document.body.removeChild(notification), 300);
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
             }, 3000);
         }
     </script>
