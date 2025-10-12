@@ -1,0 +1,51 @@
+[
+  {
+    "id": "bouquet-signature",
+    "name": "Bouquet Signature",
+    "price": 45.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Composition de fleurs fraîches de saison",
+    "image": "https://fleursdenila.netlify.app/images/bouquet2.jpg"
+  },
+  {
+    "id": "bouquet-boheme",
+    "name": "Bouquet Bohème",
+    "price": 65.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Composition de fleurs séchées aux tons naturels",
+    "image": "https://fleursdenila.netlify.app/images/bouquetSEC.jpg"
+  },
+  {
+    "id": "composition-elegance",
+    "name": "Composition Élégance",
+    "price": 75.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Bouquet raffiné aux roses rouges profondes",
+    "image": "https://fleursdenila.netlify.app/images/rougeBeau.jpg"
+  },
+  {
+    "id": "bouquet-azur",
+    "name": "Bouquet Azur",
+    "price": 58.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Composition de fleurs séchées aux nuances bleues",
+    "image": "https://fleursdenila.netlify.app/images/SecBleu1.jpg"
+  },
+  {
+    "id": "composition-vegetale",
+    "name": "Composition Végétale",
+    "price": 52.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Arrangement de feuillages et fleurs vertes",
+    "image": "https://fleursdenila.netlify.app/images/vertGlobal.jpg"
+  },
+  {
+    "id": "vase-elegant",
+    "name": "Vase Élégant",
+    "price": 35.00,
+    "url": "https://fleursdenila.netlify.app/#boutique",
+    "description": "Vase raffiné en verre soufflé",
+    "image": "https://fleursdenila.netlify.app/images/vase1.jpg"
+  }
+]
+
