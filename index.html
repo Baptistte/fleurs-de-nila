@@ -305,6 +305,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="bouquet-signature"
                             data-item-price="45.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Composition de fleurs fraîches de saison"
                             data-item-image="https://fleursdenila.netlify.app/images/bouquet2.jpg"
                             data-item-name="Bouquet Signature"
@@ -335,6 +336,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="bouquet-boheme"
                             data-item-price="65.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Composition de fleurs séchées aux tons naturels"
                             data-item-image="https://fleursdenila.netlify.app/images/bouquetSEC.jpg"
                             data-item-name="Bouquet Bohème"
@@ -365,6 +367,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="composition-elegance"
                             data-item-price="75.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Bouquet raffiné aux roses rouges profondes"
                             data-item-image="https://fleursdenila.netlify.app/images/rougeBeau.jpg"
                             data-item-name="Composition Élégance"
@@ -395,6 +398,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="bouquet-azur"
                             data-item-price="58.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Composition de fleurs séchées aux nuances bleues"
                             data-item-image="https://fleursdenila.netlify.app/images/SecBleu1.jpg"
                             data-item-name="Bouquet Azur"
@@ -425,6 +429,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="composition-vegetale"
                             data-item-price="52.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Arrangement de feuillages et fleurs vertes"
                             data-item-image="https://fleursdenila.netlify.app/images/vertGlobal.jpg"
                             data-item-name="Composition Végétale"
@@ -455,6 +460,7 @@
                             class="snipcart-add-item btn-primary w-full"
                             data-item-id="vase-elegant"
                             data-item-price="35.00"
+                            data-item-url="https://fleursdenila.netlify.app/"
                             data-item-description="Vase raffiné en verre soufflé"
                             data-item-image="https://fleursdenila.netlify.app/images/vase1.jpg"
                             data-item-name="Vase Élégant">
@@ -1014,9 +1020,50 @@
     <div id="snipcart" 
          data-api-key="MmVjYTBhZDctM2M3ZC00MGVlLTk2ZDUtY2QyN2FiOWI2MDhiNjM4OTU4NjEzNDI2NTAyMDg0" 
          data-config-modal-style="side"
-         data-config-add-product-behavior="alwaysAddToCart"
          hidden>
     </div>
+    
+    <script>
+        // Configuration Snipcart pour comportement personnalisé
+        document.addEventListener('snipcart.ready', () => {
+            // Ne pas ouvrir automatiquement le panier lors de l'ajout
+            Snipcart.api.configure('show_cart_automatically', false);
+            
+            // Écouter l'événement d'ajout au panier
+            Snipcart.events.on('item.added', (item) => {
+                // Afficher une notification élégante
+                showAddedNotification(item.name);
+            });
+        });
+        
+        // Fonction pour afficher la notification "Article ajouté"
+        function showAddedNotification(itemName) {
+            // Créer la notification
+            const notification = document.createElement('div');
+            notification.className = 'cart-notification';
+            notification.innerHTML = `
+                <div class="cart-notification-content">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span><strong>${itemName}</strong> ajouté au panier</span>
+                </div>
+            `;
+            
+            // Ajouter au body
+            document.body.appendChild(notification);
+            
+            // Animation d'entrée
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            // Retirer après 3 secondes
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+    </script>
+    
     <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
     
     <script src="script.js"></script>
