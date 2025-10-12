@@ -7,6 +7,11 @@
     <title>Les Fleurs de Nila — Élégance Florale</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Snipcart -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -63,14 +68,21 @@
             
             <div class="px-6 lg:px-12 xl:px-16 py-3 lg:py-4 flex items-center justify-center h-20 lg:h-24">
                 <!-- Menu Desktop -->
-                <div class="flex items-center justify-center gap-6 lg:gap-8 xl:gap-12 w-full">
+                <div class="flex items-center justify-center gap-6 lg:gap-8 xl:gap-10 w-full">
                     <a href="#accueil" class="nav-link text-xs lg:text-sm xl:text-base">Accueil</a>
                     <a href="#collections" class="nav-link text-xs lg:text-sm xl:text-base">Collections</a>
+                    <a href="#boutique" class="nav-link text-xs lg:text-sm xl:text-base">Boutique</a>
                     <a href="#evenementiel" class="nav-link text-xs lg:text-sm xl:text-base">Événementiel</a>
                     <a href="#abonnement" class="nav-link text-xs lg:text-sm xl:text-base">Abonnement</a>
                     <a href="#a-propos" class="nav-link text-xs lg:text-sm xl:text-base">À Propos</a>
                     <a href="#faq" class="nav-link text-xs lg:text-sm xl:text-base">FAQ</a>
                     <a href="#contact" class="nav-link text-xs lg:text-sm xl:text-base">Contact</a>
+                    <button class="snipcart-checkout nav-link text-xs lg:text-sm xl:text-base flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                        <span class="snipcart-items-count"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -81,11 +93,18 @@
         <div class="flex flex-col items-center justify-center h-full space-y-8">
             <a href="#accueil" class="mobile-nav-link">Accueil</a>
             <a href="#collections" class="mobile-nav-link">Collections</a>
+            <a href="#boutique" class="mobile-nav-link">Boutique</a>
             <a href="#evenementiel" class="mobile-nav-link">Événementiel</a>
             <a href="#abonnement" class="mobile-nav-link">Abonnement</a>
             <a href="#a-propos" class="mobile-nav-link">À Propos</a>
             <a href="#faq" class="mobile-nav-link">FAQ</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
+            <button class="snipcart-checkout mobile-nav-link text-2xl flex items-center gap-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+                Panier (<span class="snipcart-items-count">0</span>)
+            </button>
         </div>
     </div>
 
@@ -247,6 +266,244 @@
                         </p>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boutique Section -->
+    <section id="boutique" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-20 lg:mb-28">
+                <p class="text-secondary text-sm tracking-widest uppercase mb-4 font-light">Commander en Ligne</p>
+                <h2 class="font-display text-4xl lg:text-6xl text-primary font-light mb-6">Boutique</h2>
+                <div class="w-20 h-px bg-accent mx-auto mb-8"></div>
+                <p class="text-lg text-gray-700 font-light max-w-3xl mx-auto leading-relaxed">
+                    Découvrez notre sélection de bouquets artisanaux, disponibles à la livraison ou au retrait en boutique.
+                </p>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                
+                <!-- Produit 1 : Bouquet Frais Signature -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/bouquet2.webp" type="image/webp">
+                            <img src="images/bouquet2.jpg" alt="Bouquet Frais Signature" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Fraîcheur Éphémère</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Bouquet Signature</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Composition de fleurs fraîches de saison, sélectionnées avec soin pour leur beauté et leur élégance.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">45,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="bouquet-signature"
+                            data-item-price="45.00"
+                            data-item-url="/boutique"
+                            data-item-description="Composition de fleurs fraîches de saison"
+                            data-item-image="images/bouquet2.jpg"
+                            data-item-name="Bouquet Signature"
+                            data-item-custom1-name="Message personnalisé"
+                            data-item-custom1-type="textarea"
+                            data-item-custom1-placeholder="Ajoutez un message (optionnel)">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Produit 2 : Bouquet Séché Bohème -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/bouquetSEC.webp" type="image/webp">
+                            <img src="images/bouquetSEC.jpg" alt="Bouquet Séché Bohème" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Beauté Éternelle</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Bouquet Bohème</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Composition de fleurs séchées aux tons naturels, pour une décoration intemporelle qui traverse les saisons.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">65,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="bouquet-boheme"
+                            data-item-price="65.00"
+                            data-item-url="/boutique"
+                            data-item-description="Composition de fleurs séchées aux tons naturels"
+                            data-item-image="images/bouquetSEC.jpg"
+                            data-item-name="Bouquet Bohème"
+                            data-item-custom1-name="Message personnalisé"
+                            data-item-custom1-type="textarea"
+                            data-item-custom1-placeholder="Ajoutez un message (optionnel)">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Produit 3 : Composition Élégance -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/rougeBeau.webp" type="image/webp">
+                            <img src="images/rougeBeau.jpg" alt="Composition Élégance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Fraîcheur Éphémère</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Composition Élégance</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Bouquet raffiné aux roses rouges profondes, symbole d'amour et de passion. Parfait pour les occasions spéciales.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">75,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="composition-elegance"
+                            data-item-price="75.00"
+                            data-item-url="/boutique"
+                            data-item-description="Bouquet raffiné aux roses rouges profondes"
+                            data-item-image="images/rougeBeau.jpg"
+                            data-item-name="Composition Élégance"
+                            data-item-custom1-name="Message personnalisé"
+                            data-item-custom1-type="textarea"
+                            data-item-custom1-placeholder="Ajoutez un message (optionnel)">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Produit 4 : Bouquet Séché Azur -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/SecBleu1.webp" type="image/webp">
+                            <img src="images/SecBleu1.jpg" alt="Bouquet Séché Azur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Beauté Éternelle</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Bouquet Azur</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Composition unique de fleurs séchées aux nuances bleues, apportant une touche de sérénité à votre intérieur.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">58,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="bouquet-azur"
+                            data-item-price="58.00"
+                            data-item-url="/boutique"
+                            data-item-description="Composition de fleurs séchées aux nuances bleues"
+                            data-item-image="images/SecBleu1.jpg"
+                            data-item-name="Bouquet Azur"
+                            data-item-custom1-name="Message personnalisé"
+                            data-item-custom1-type="textarea"
+                            data-item-custom1-placeholder="Ajoutez un message (optionnel)">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Produit 5 : Composition Verte -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/vertGlobal.webp" type="image/webp">
+                            <img src="images/vertGlobal.jpg" alt="Composition Végétale" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">Fraîcheur Éphémère</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Composition Végétale</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Arrangement aérien de feuillages et fleurs vertes, parfait pour apporter de la fraîcheur à votre espace.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">52,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="composition-vegetale"
+                            data-item-price="52.00"
+                            data-item-url="/boutique"
+                            data-item-description="Arrangement de feuillages et fleurs vertes"
+                            data-item-image="images/vertGlobal.jpg"
+                            data-item-name="Composition Végétale"
+                            data-item-custom1-name="Message personnalisé"
+                            data-item-custom1-type="textarea"
+                            data-item-custom1-placeholder="Ajoutez un message (optionnel)">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Produit 6 : Collection Vases -->
+                <article class="product-card group">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-cream rounded-lg">
+                        <picture>
+                            <source srcset="images/vase1.webp" type="image/webp">
+                            <img src="images/vase1.jpg" alt="Vase Élégant" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </picture>
+                    </div>
+                    <div class="text-center px-4">
+                        <p class="text-secondary text-xs tracking-widest uppercase mb-2">L'Art du Détail</p>
+                        <h3 class="font-display text-2xl lg:text-3xl text-primary mb-3 font-light">Vase Élégant</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-sm">
+                            Vase raffiné en verre soufflé, idéal pour sublimer vos compositions florales. Design intemporel.
+                        </p>
+                        <p class="text-2xl text-primary font-light mb-6">35,00 €</p>
+                        <button 
+                            class="snipcart-add-item btn-primary w-full"
+                            data-item-id="vase-elegant"
+                            data-item-price="35.00"
+                            data-item-url="/boutique"
+                            data-item-description="Vase raffiné en verre soufflé"
+                            data-item-image="images/vase1.jpg"
+                            data-item-name="Vase Élégant">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Informations pratiques -->
+            <div class="mt-20 bg-cream/50 rounded-lg p-8 lg:p-12 text-center">
+                <h3 class="font-display text-2xl lg:text-3xl text-primary font-light mb-6">Livraison & Retrait</h3>
+                <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-left">
+                    <div>
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-2">Retrait en Boutique</h4>
+                                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                                    Gratuit - Disponible sous 24h<br>
+                                    3 rue Auguste-Pellet, Nîmes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-2">Livraison à Nîmes</h4>
+                                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                                    12€ - Livraison sous 48h<br>
+                                    Zone de livraison : Nîmes et environs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -729,6 +986,7 @@
                     <nav class="space-y-2">
                         <a href="#accueil" class="block text-gray-600 hover:text-primary transition-colors text-sm">Accueil</a>
                         <a href="#collections" class="block text-gray-600 hover:text-primary transition-colors text-sm">Collections</a>
+                        <a href="#boutique" class="block text-gray-600 hover:text-primary transition-colors text-sm">Boutique</a>
                         <a href="#evenementiel" class="block text-gray-600 hover:text-primary transition-colors text-sm">Événementiel</a>
                         <a href="#abonnement" class="block text-gray-600 hover:text-primary transition-colors text-sm">Abonnement</a>
                         <a href="#a-propos" class="block text-gray-600 hover:text-primary transition-colors text-sm">À Propos</a>
@@ -751,10 +1009,17 @@
                 <p class="text-gray-500 text-sm font-light">
                     © 2025 Fleurs de Nila — Nîmes, France
                 </p>
+                <p class="text-gray-400 text-xs font-light mt-3">
+                    Réalisé par <a href="https://creationeditionbroderie.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">Création Édition & Broderie</a>
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Snipcart Integration -->
+    <div id="snipcart" data-api-key="MmVjYTBhZDctM2M3ZC00MGVlLTk2ZDUtY2QyN2FiOWI2MDhiNjM4OTU4NjEzNDI2NTAyMDg0" data-config-modal-style="side" hidden></div>
+    <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>

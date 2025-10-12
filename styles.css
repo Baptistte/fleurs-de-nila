@@ -622,3 +622,124 @@ body {
     background: currentColor;
     opacity: 0.3;
 }
+
+/* ========================================
+   Snipcart Custom Styling
+   ======================================== */
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Snipcart Theme Customization */
+:root {
+    --snipcart-primary: #1a365d;
+    --snipcart-secondary: #2d5282;
+    --snipcart-accent: #bee3f8;
+    --snipcart-font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Override Snipcart default colors */
+.snipcart {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.snipcart__box--badge {
+    background-color: #1a365d !important;
+}
+
+.snipcart-checkout {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.snipcart-checkout::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: #1a365d;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.snipcart-checkout:hover::after {
+    width: 100%;
+}
+
+.snipcart-items-count {
+    display: inline-block;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #1a365d;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Style the cart when it's empty */
+.snipcart-items-count:empty::before {
+    content: '0';
+}
+
+/* Customize Snipcart modal */
+.snipcart-modal__container {
+    font-family: Georgia, 'Times New Roman', serif !important;
+}
+
+.snipcart__actions--link {
+    color: #1a365d !important;
+}
+
+.snipcart__actions--link:hover {
+    color: #2d5282 !important;
+}
+
+/* Customize buttons in cart */
+.snipcart__button--highlight {
+    background-color: #1a365d !important;
+    border-color: #1a365d !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.snipcart__button--highlight:hover {
+    background-color: #2d5282 !important;
+    border-color: #2d5282 !important;
+}
+
+/* Elegant focus for accessibility */
+.snipcart-checkout:focus {
+    outline: 2px solid #bee3f8;
+    outline-offset: 4px;
+}
+
+/* Mobile cart button styling */
+@media (max-width: 1024px) {
+    .mobile-nav-link.snipcart-checkout {
+        color: #1a365d;
+        font-family: 'Fleur de Leah', Georgia, serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-nav-link.snipcart-checkout:hover {
+        color: #2d5282;
+        transform: translateX(10px);
+    }
+}
