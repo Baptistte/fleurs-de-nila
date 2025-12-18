@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Page principale -->
+    <url>
+        <loc>https://www.fleursdenila.fr/</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Images principales pour Google Images -->
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/devanture1.webp</image:loc>
+            <image:title>Devanture de la boutique Les Fleurs de Nila à Nîmes</image:title>
+            <image:caption>Boutique fleuriste artisan Les Fleurs de Nila, 3 rue Auguste-Pellet, Nîmes</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/bouquet2.webp</image:loc>
+            <image:title>Bouquet de fleurs fraîches de saison</image:title>
+            <image:caption>Composition florale artisanale avec fleurs de saison - Les Fleurs de Nila</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/bouquetSEC.webp</image:loc>
+            <image:title>Bouquet de fleurs séchées</image:title>
+            <image:caption>Bouquet de fleurs séchées durable - Fleuriste Nîmes</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/SecEsthetique.webp</image:loc>
+            <image:title>Décoration florale pour mariage</image:title>
+            <image:caption>Création florale pour mariage et événements - Les Fleurs de Nila Nîmes</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/closeUP1.webp</image:loc>
+            <image:title>Détail d'une composition florale</image:title>
+            <image:caption>Macro détail de pétales - Art floral artisanal</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Sections avec ancres (pour référence, même si c'est une SPA) -->
+    <url>
+        <loc>https://www.fleursdenila.fr/#collections</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.fleursdenila.fr/#evenementiel</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.fleursdenila.fr/#abonnement</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.fleursdenila.fr/#contact</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+</urlset>
+

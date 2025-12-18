@@ -1,0 +1,20 @@
+# Robots.txt pour Les Fleurs de Nila
+# https://www.fleursdenila.fr/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.fleursdenila.fr/sitemap.xml
+
+# Interdire l'accès aux dossiers de backup et documentation
+Disallow: /images_backup/
+Disallow: /doc/
+
+# Autoriser tous les crawlers à indexer les images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Délai entre les requêtes (en secondes) - optionnel, pour ne pas surcharger le serveur
+Crawl-delay: 1
+
