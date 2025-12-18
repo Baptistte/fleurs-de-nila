@@ -102,8 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialiser les éléments à révéler
     // Ajoute automatiquement la classe .reveal aux éléments clés s'ils ne l'ont pas déjà
+    // EXCLUSION des éléments FAQ pour éviter les conflits
     const elementsToAnimate = document.querySelectorAll(
-        'section h2, section h3, section p, .collection-card, .faq-item, article, .gallery-item, .bento-cell'
+        'section h2:not(.faq-container h2), section h3:not(.faq-container h3), section p:not(.faq-answer p), .collection-card, article:not(.faq-item), .gallery-item, .bento-cell'
     );
 
     elementsToAnimate.forEach((el) => {
@@ -132,49 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { passive: true });
     }
 
-    // ============================================
-    // FAQ Accordion (Amélioré)
-    // ============================================
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        
-        if (question && answer) {
-            // Initialiser les réponses comme cachées (pas .hidden, mais via CSS)
-            answer.classList.remove('hidden');
-            
-            question.addEventListener('click', () => {
-                const isOpen = item.classList.contains('open');
-                
-                // Fermer tous les autres items (accordéon exclusif)
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('open');
-                    }
-                });
-                
-                // Toggle l'item actuel avec animation
-                if (isOpen) {
-                    item.classList.remove('open');
-                } else {
-                    item.classList.add('open');
-                    
-                    // Scroll vers la question si nécessaire
-                    setTimeout(() => {
-                        const rect = item.getBoundingClientRect();
-                        if (rect.top < 100) {
-                            window.scrollBy({
-                                top: rect.top - 120,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }, 100);
-                }
-            });
-        }
-    });
 
     // ============================================
     // Micro-interactions : Hover Effects
@@ -184,6 +142,26 @@ document.addEventListener('DOMContentLoaded', function() {
     interactives.forEach(el => {
         el.classList.add('hover-lift');
     });
+
+    // ============================================
+    // FAQ Accordéon - Hauteur Constante
+    // ============================================
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Si on clique sur un item déjà actif, on ne fait rien
+                if (item.classList.contains('active')) return;
+                
+                // Retirer la classe active de tous les items
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Ajouter la classe active à l'item cliqué
+                item.classList.add('active');
+            });
+        });
+    }
 
     console.log('🌸 Les Fleurs de Nila — Animations chargées');
 });
