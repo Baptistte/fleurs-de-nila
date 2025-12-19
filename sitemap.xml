@@ -12,14 +12,14 @@
         <!-- Images principales pour Google Images -->
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/devanture1.webp</image:loc>
-            <image:title>Devanture de la boutique Les Fleurs de Nila à Nîmes</image:title>
-            <image:caption>Boutique fleuriste artisan Les Fleurs de Nila, 3 rue Auguste-Pellet, Nîmes</image:caption>
+            <image:title>Devanture de la boutique Fleurs de Nila à Nîmes</image:title>
+            <image:caption>Boutique fleuriste artisan Fleurs de Nila, 3 rue Auguste-Pellet, Nîmes</image:caption>
         </image:image>
         
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/bouquet2.webp</image:loc>
             <image:title>Bouquet de fleurs fraîches de saison</image:title>
-            <image:caption>Composition florale artisanale avec fleurs de saison - Les Fleurs de Nila</image:caption>
+            <image:caption>Composition florale artisanale avec fleurs de saison - Fleurs de Nila</image:caption>
         </image:image>
         
         <image:image>
@@ -31,7 +31,7 @@
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/SecEsthetique.webp</image:loc>
             <image:title>Décoration florale pour mariage</image:title>
-            <image:caption>Création florale pour mariage et événements - Les Fleurs de Nila Nîmes</image:caption>
+            <image:caption>Création florale pour mariage et événements - Fleurs de Nila Nîmes</image:caption>
         </image:image>
         
         <image:image>

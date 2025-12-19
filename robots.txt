@@ -1,4 +1,4 @@
-# Robots.txt pour Les Fleurs de Nila
+# Robots.txt pour Fleurs de Nila
 # https://www.fleursdenila.fr/
 
 User-agent: *

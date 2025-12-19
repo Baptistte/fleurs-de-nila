@@ -163,5 +163,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    console.log('🌸 Les Fleurs de Nila — Animations chargées');
+    console.log('🌸 Fleurs de Nila — Animations chargées');
 });

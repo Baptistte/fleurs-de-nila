@@ -1,6 +1,6 @@
-# Les Fleurs de Nila — Élégance Intemporelle
+# Fleurs de Nila — Élégance Intemporelle
 
-Site vitrine minimaliste et sophistiqué pour "Les Fleurs de Nila", fleuriste artisanal à Nîmes.
+Site vitrine minimaliste et sophistiqué pour "Fleurs de Nila", fleuriste artisanal à Nîmes.
 
 ## 🌸 Concept
 
@@ -204,7 +204,7 @@ Double-cliquer sur `index.html` dans le Finder
 
 ## 📞 Contact
 
-**Les Fleurs de Nila**  
+**Fleurs de Nila**  
 📍 Nîmes, France  
 🕒 Mardi — Samedi : 9h00 — 19h00
 
@@ -212,4 +212,4 @@ Double-cliquer sur `index.html` dans le Finder
 
 *Élégance Intemporelle* 🌸
 
-© 2025 Les Fleurs de Nila
+© 2025 Fleurs de Nila
