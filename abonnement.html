@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Blog Fleurs de Nila | Conseils & Inspirations Florales</title>
-    <meta name="description" content="Le blog de Fleurs de Nila : conseils pour entretenir vos bouquets, inspirations florales de saison et idées pour sublimer votre intérieur avec des fleurs.">
+    <title>Abonnement Floral | Fleurs de Nila — Livraison Mensuelle</title>
+    <meta name="description" content="Découvrez nos formules d'abonnement floral à Nîmes. Livraison mensuelle de bouquets frais ou fleurs séchées. Flexible et sur mesure.">
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://www.fleursdenila.fr/blog">
+    <link rel="canonical" href="https://www.fleursdenila.fr/abonnement">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -37,20 +37,15 @@
         }
     </script>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Note: J'ai retiré le lien vers styles.css car le CSS n'était pas fourni, 
-         mais tailwind gère tout ici. Remettez-le si vous avez du CSS custom externe. -->
 </head>
 <body class="font-sans text-primary bg-cream antialiased selection:bg-primary selection:text-white">
 
     <!-- Navigation -->
-    <!-- Correction : Navbar fixée proprement en haut (top-0) avec une hauteur définie implicitement par le contenu -->
     <nav id="nav" class="fixed top-0 left-0 w-full z-50 bg-white border-b border-primary transition-all duration-300">
         
         <!-- Mobile Layout -->
         <div class="lg:hidden w-full px-4 py-2">
             <div class="flex items-center justify-between">
-                <!-- Spacer pour centrer le logo -->
                 <div class="flex-1"></div>
                 
                 <a href="index.html#accueil" class="transition-opacity hover:opacity-80 flex-shrink-0">
@@ -102,7 +97,7 @@
             <a href="index.html#accueil" class="mobile-nav-link text-6xl">Accueil</a>
             <a href="index.html#collections" class="mobile-nav-link text-6xl">Collections</a>
             <a href="index.html#evenementiel" class="mobile-nav-link text-6xl">Événementiel</a>
-            <a href="abonnement.html" class="mobile-nav-link text-6xl font-bold">Abonnement</a>
+            <a href="abonnement.html" class="mobile-nav-link text-6xl">Abonnement</a>
             <a href="index.html#apropos" class="mobile-nav-link text-6xl">À propos</a>
             <a href="blog.html" class="mobile-nav-link text-6xl">Blog</a>
             <a href="index.html#contact" class="mobile-nav-link text-6xl">Contact</a>
@@ -110,117 +105,234 @@
     </div>
 
     <!-- Bandeau bleu -->
-    <!-- Correction : mt-32 pour mobile (car nav ~128px) et lg:mt-24 pour desktop (car nav = 96px/h-24) -->
     <div class="border-b border-primary overflow-hidden bg-primary text-white top-marquee mt-32 lg:mt-24">
         <div class="whitespace-nowrap flex justify-around items-center uppercase tracking-widest w-full px-4">
-            <span class="top-marquee-item">Blog Fleurs de Nila</span>
+            <span class="top-marquee-item">Abonnement Floral</span>
             <span class="hidden sm:inline top-marquee-item separator">•</span>
-            <span class="top-marquee-item">Conseils d'entretien</span>
+            <span class="top-marquee-item">Livraison Mensuelle</span>
             <span class="hidden sm:inline top-marquee-item separator">•</span>
-            <span class="top-marquee-item">Inspirations florales</span>
+            <span class="top-marquee-item">Flexible & Sur Mesure</span>
             <!-- Duplication pour l'animation continue en mobile -->
-            <span class="top-marquee-item sm:hidden">Blog Fleurs de Nila</span>
-            <span class="top-marquee-item sm:hidden">Conseils d'entretien</span>
-            <span class="top-marquee-item sm:hidden">Inspirations florales</span>
+            <span class="top-marquee-item sm:hidden">Abonnement Floral</span>
+            <span class="top-marquee-item sm:hidden">Livraison Mensuelle</span>
+            <span class="top-marquee-item sm:hidden">Flexible & Sur Mesure</span>
         </div>
     </div>
 
-    <!-- Hero Blog -->
+    <!-- Hero Abonnement -->
     <section class="w-full bg-white border-b border-primary relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <img src="images/bouquet2.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
         </div>
         <div class="max-w-5xl mx-auto px-6 lg:px-12 py-12 lg:py-20 relative z-10">
-            <p class="text-xs font-bold uppercase tracking-[0.3em] text-secondary mb-4">Le blog</p>
+            <p class="text-xs font-bold uppercase tracking-[0.3em] text-secondary mb-4">Nos Formules</p>
             <h1 class="font-display text-5xl md:text-6xl text-primary leading-tight mb-6">
-                Fleurs & Histoires
+                Abonnement Floral
             </h1>
-            <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl mb-8">
-                Une sélection d'articles pour mieux comprendre les fleurs, leur saisonnalité
-                et la manière de les intégrer dans votre quotidien, à la maison comme pour vos événements.
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl">
+                Recevez chaque mois un bouquet de fleurs fraîches ou séchées, directement chez vous à Nîmes. 
+                Flexible, annulable à tout moment, avec la possibilité de personnaliser vos compositions.
             </p>
-            
-            <!-- Barre de recherche -->
-            <div class="mt-8">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Rechercher un article..." 
-                    class="w-full max-w-md px-4 py-3 border-2 border-primary text-primary placeholder-gray-500 focus:outline-none focus:border-secondary transition-colors"
-                >
+        </div>
+    </section>
+
+    <!-- Formules d'Abonnement -->
+    <section class="w-full bg-cream border-b border-primary">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Formule Découverte -->
+                <div class="bg-white border-2 border-primary p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-secondary mb-2 font-bold">Formule 1</p>
+                        <h2 class="font-display text-3xl text-primary mb-2">Découverte</h2>
+                        <p class="text-sm text-gray-600 mb-6">Parfait pour débuter</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary">29€</span>
+                            <span class="text-gray-600 text-sm">/mois</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>1 bouquet de fleurs fraîches</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Livraison à Nîmes</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Fleurs de saison</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Annulation flexible</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="w-full px-6 py-3 border-2 border-primary text-primary text-sm uppercase tracking-widest font-medium hover:bg-primary hover:text-white transition-all duration-300">
+                        Choisir
+                    </button>
+                </div>
+
+                <!-- Formule Privilège -->
+                <div class="bg-white border-2 border-secondary p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative md:-translate-y-4">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span class="bg-secondary text-white px-4 py-1 text-xs uppercase tracking-widest font-bold rounded">
+                            Populaire
+                        </span>
+                    </div>
+                    
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-secondary mb-2 font-bold">Formule 2</p>
+                        <h2 class="font-display text-3xl text-primary mb-2">Privilège</h2>
+                        <p class="text-sm text-gray-600 mb-6">Notre formule la plus appréciée</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary">49€</span>
+                            <span class="text-gray-600 text-sm">/mois</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-secondary mr-3 font-bold">✓</span>
+                                <span>2 bouquets au choix</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-secondary mr-3 font-bold">✓</span>
+                                <span>Fleurs fraîches OU séchées</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-secondary mr-3 font-bold">✓</span>
+                                <span>Livraison prioritaire</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-secondary mr-3 font-bold">✓</span>
+                                <span>Personnalisation incluse</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-secondary mr-3 font-bold">✓</span>
+                                <span>10% de réduction</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="w-full px-6 py-3 bg-secondary text-white text-sm uppercase tracking-widest font-medium hover:bg-primary transition-all duration-300">
+                        Choisir
+                    </button>
+                </div>
+
+                <!-- Formule Prestige -->
+                <div class="bg-white border-2 border-primary p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-secondary mb-2 font-bold">Formule 3</p>
+                        <h2 class="font-display text-3xl text-primary mb-2">Prestige</h2>
+                        <p class="text-sm text-gray-600 mb-6">L'expérience premium</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary">79€</span>
+                            <span class="text-gray-600 text-sm">/mois</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Création florale sur mesure</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>3 compositions chaque mois</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Consultation avec fleuriste</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>Livraison deux fois/mois</span>
+                            </li>
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-primary mr-3 font-bold">✓</span>
+                                <span>20% de réduction</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="w-full px-6 py-3 border-2 border-primary text-primary text-sm uppercase tracking-widest font-medium hover:bg-primary hover:text-white transition-all duration-300">
+                        Choisir
+                    </button>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Liste des articles -->
-    <section class="w-full bg-cream border-b border-primary">
-        <div class="max-w-5xl mx-auto px-6 lg:px-12 py-12 lg:py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Avantages - Roadmap -->
+    <section class="w-full bg-white border-b border-primary">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
+            <h2 class="font-display text-5xl md:text-6xl text-primary mb-16 text-center">Pourquoi s'abonner ?</h2>
             
-            <!-- Article 1 -->
-            <a href="article1.html" class="block group">
-                <article class="border border-primary bg-white p-6 lg:p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 h-full">
-                    <div>
-                        <div class="mb-4 overflow-hidden border border-primary">
-                            <img src="images/bouquet2.jpg" alt="Bouquet de fleurs fraîches de saison - Conseils d'entretien" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="text-xs uppercase tracking-widest text-secondary mb-2">Conseils pratiques</p>
-                        <h2 class="font-display text-3xl text-primary mb-4 group-hover:text-secondary transition-colors">
-                            Comment prolonger la tenue de vos bouquets de fleurs fraîches
-                        </h2>
-                        <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                            De la coupe des tiges à la qualité de l'eau, quelques gestes simples permettent
-                            de profiter plus longtemps de vos bouquets. Nous vous partageons nos réflexes
-                            d'atelier pour garder vos fleurs belles jour après jour.
-                        </p>
+            <!-- Roadmap Timeline -->
+            <div class="space-y-12">
+                <!-- Étape 1 -->
+                <div class="flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center">
+                        <span class="font-display text-3xl">01</span>
                     </div>
-                    <div class="flex items-center justify-between gap-4">
-                        <span class="text-xs uppercase tracking-widest text-primary font-medium">Lecture 5 min</span>
-                        <button class="inline-block px-6 py-2 border-2 border-primary text-primary text-xs uppercase tracking-widest font-medium hover:bg-primary hover:text-white transition-all duration-300">
-                            Lire l'article →
-                        </button>
+                    <div class="flex-grow">
+                        <h3 class="font-display text-3xl text-primary mb-3">Fleurs de qualité premium</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">Sélectionnées avec soin auprès de producteurs de confiance, nos fleurs sont toujours fraîches et magnifiques. Chaque composition est travaillée par nos fleuristes artisans.</p>
                     </div>
-                </article>
-            </a>
+                </div>
 
-            <!-- Article 2 -->
-            <a href="article2.html" class="block group">
-                <article class="border border-primary bg-white p-6 lg:p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 h-full">
-                    <div>
-                        <div class="mb-4 overflow-hidden border border-primary">
-                            <img src="images/bouquetSEC.jpg" alt="Bouquet de fleurs séchées naturelles - Décoration durable" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="text-xs uppercase tracking-widest text-secondary mb-2">Inspiration déco</p>
-                        <h2 class="font-display text-3xl text-primary mb-4 group-hover:text-secondary transition-colors">
-                            Fleurs séchées : idées pour une décoration douce et durable
-                        </h2>
-                        <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                            Les fleurs séchées apportent une touche poétique et chaleureuse à votre intérieur.
-                            Couleurs, volumes, vases : découvrez comment les intégrer chez vous pour une
-                            décoration qui dure dans le temps, sans entretien.
-                        </p>
+                <!-- Connecteur -->
+                <div class="flex justify-center">
+                    <div class="w-1 h-12 bg-gradient-to-b from-primary to-secondary"></div>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center">
+                        <span class="font-display text-3xl">02</span>
                     </div>
-                    <div class="flex items-center justify-between gap-4">
-                        <span class="text-xs uppercase tracking-widest text-primary font-medium">Lecture 5 min</span>
-                        <button class="inline-block px-6 py-2 border-2 border-primary text-primary text-xs uppercase tracking-widest font-medium hover:bg-primary hover:text-white transition-all duration-300">
-                            Lire l'article →
-                        </button>
+                    <div class="flex-grow">
+                        <h3 class="font-display text-3xl text-primary mb-3">Livraison incluse & garantie</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">Livraison gratuite à votre domicile ou bureau sur Nîmes, sans frais supplémentaires. Nos compositions arrivent en parfait état, garanties fraîches.</p>
                     </div>
-                </article>
-            </a>
+                </div>
+
+                <!-- Connecteur -->
+                <div class="flex justify-center">
+                    <div class="w-1 h-12 bg-gradient-to-b from-secondary to-primary"></div>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="flex gap-8 items-start">
+                    <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center">
+                        <span class="font-display text-3xl">03</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-display text-3xl text-primary mb-3">Flexible & Sans engagement</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">Annulez quand vous le souhaitez, modifiez vos préférences chaque mois, personnalisez vos compositions. Aucun engagement, pure flexibilité.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Retour au site principal -->
+    <!-- CTA -->
     <section class="w-full bg-white border-b border-primary">
         <div class="max-w-5xl mx-auto px-6 lg:px-12 py-10 lg:py-14 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-                <p class="text-xs uppercase tracking-widest text-secondary mb-2">Envie d'aller plus loin ?</p>
-                <h2 class="font-display text-3xl text-primary">Découvrir l'atelier Fleurs de Nila</h2>
+                <p class="text-xs uppercase tracking-widest text-secondary mb-2">Des questions ?</p>
+                <h2 class="font-display text-3xl text-primary">Contactez-nous</h2>
             </div>
             <div>
-                <!-- Bouton stylisé -->
-                <a href="index.html#accueil" class="inline-block px-8 py-3 bg-primary text-white text-sm uppercase tracking-widest hover:bg-secondary transition-colors">
-                    Retour au site
+                <a href="index.html#contact" class="inline-block px-8 py-3 bg-primary text-white text-sm uppercase tracking-widest hover:bg-secondary transition-colors">
+                    Nous contacter
                 </a>
             </div>
         </div>
@@ -329,27 +441,6 @@
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('opacity-0');
                     setTimeout(() => mobileMenu.classList.add('hidden'), 500);
-                });
-            });
-        }
-
-        // Recherche d'articles
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) {
-            searchInput.addEventListener('keyup', function() {
-                const searchTerm = this.value.toLowerCase();
-                const articles = document.querySelectorAll('article');
-                
-                articles.forEach(article => {
-                    const title = article.querySelector('h2')?.textContent.toLowerCase() || '';
-                    const description = article.querySelector('p:not(.text-xs)')?.textContent.toLowerCase() || '';
-                    const category = article.querySelector('p.text-xs.uppercase')?.textContent.toLowerCase() || '';
-                    
-                    const matches = title.includes(searchTerm) || 
-                                  description.includes(searchTerm) || 
-                                  category.includes(searchTerm);
-                    
-                    article.parentElement.style.display = matches || searchTerm === '' ? 'block' : 'none';
                 });
             });
         }
