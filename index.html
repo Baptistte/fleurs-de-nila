@@ -99,7 +99,7 @@
             {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "Sunday",
-                "opens": "10:30",
+                "opens": "10:00",
                 "closes": "13:00"
             }
         ],
@@ -140,10 +140,10 @@
             },
             {
                 "@type": "Question",
-                "name": "Quelle est la durée de vie des fleurs fraîches ?",
+                "name": "Quelles fleurs propose Fleurs de Nila ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nos fleurs fraîches durent entre 7 et 10 jours avec un entretien adapté. Les fleurs séchées, elles, durent des années !"
+                    "text": "Nous travaillons principalement des fleurs de saison, fraîches ou séchées, sélectionnées avec soin auprès de producteurs de confiance."
                 }
             },
             {
@@ -201,6 +201,8 @@
                     <a href="#collections" class="nav-link text-sm lg:text-base xl:text-lg">Collections</a>
                     <a href="#evenementiel" class="nav-link text-sm lg:text-base xl:text-lg">Événementiel</a>
                     <a href="#abonnement" class="nav-link text-sm lg:text-base xl:text-lg">Abonnement</a>
+                    <a href="#apropos" class="nav-link text-sm lg:text-base xl:text-lg">À propos</a>
+                    <a href="blog.html" class="nav-link text-sm lg:text-base xl:text-lg">Blog</a>
                     <a href="#contact" class="nav-link text-sm lg:text-base xl:text-lg">Contact</a>
                 </div>
             </div>
@@ -214,6 +216,8 @@
             <a href="#collections" class="mobile-nav-link">Collections</a>
             <a href="#evenementiel" class="mobile-nav-link">Événementiel</a>
             <a href="#abonnement" class="mobile-nav-link">Abonnement</a>
+            <a href="#apropos" class="mobile-nav-link">À propos</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
         </div>
     </div>
@@ -263,17 +267,23 @@
     </section>
 
     <!-- Bandeau Marquee FIXE -->
-    <div class="border-b border-primary overflow-hidden py-3 bg-primary text-white">
-        <div class="whitespace-nowrap flex justify-around items-center uppercase text-sm tracking-widest w-full px-4">
-            <span>Fleurs Fraîches</span>
-            <span class="hidden sm:inline">•</span>
-            <span>Fleurs Séchées</span>
-            <span class="hidden sm:inline">•</span>
-            <span>Événementiel</span>
-            <span class="hidden sm:inline">•</span>
-            <span>Mariages</span>
-            <span class="hidden sm:inline">•</span>
-            <span>Livraison Nîmes</span>
+    <div class="border-b border-primary overflow-hidden bg-primary text-white top-marquee">
+        <div class="whitespace-nowrap flex justify-around items-center uppercase tracking-widest w-full px-4">
+            <span class="top-marquee-item">Fleurs Fraîches</span>
+            <span class="hidden sm:inline top-marquee-item separator">•</span>
+            <span class="top-marquee-item">Fleurs Séchées</span>
+            <span class="hidden sm:inline top-marquee-item separator">•</span>
+            <span class="top-marquee-item">Événementiel</span>
+            <span class="hidden sm:inline top-marquee-item separator">•</span>
+            <span class="top-marquee-item">Mariages</span>
+            <span class="hidden sm:inline top-marquee-item separator">•</span>
+            <span class="top-marquee-item">Livraison Nîmes</span>
+            <!-- Duplication pour l'animation continue en mobile -->
+            <span class="top-marquee-item sm:hidden">Fleurs Fraîches</span>
+            <span class="top-marquee-item sm:hidden">Fleurs Séchées</span>
+            <span class="top-marquee-item sm:hidden">Événementiel</span>
+            <span class="top-marquee-item sm:hidden">Mariages</span>
+            <span class="top-marquee-item sm:hidden">Livraison Nîmes</span>
         </div>
     </div>
 
@@ -282,7 +292,7 @@
         <!-- Titre Section intégré à la grille -->
         <div class="grid grid-cols-1 lg:grid-cols-4 border-b border-primary">
             <div class="lg:col-span-1 border-b lg:border-b-0 lg:border-r border-primary p-10 lg:p-12 flex flex-col justify-center items-start bg-cream relative">
-                <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3">Catalogue 2025</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3">Catalogue 2026</span>
                 <h2 class="font-display text-5xl lg:text-6xl text-primary leading-none mb-6">Nos<br>Collections</h2>
                 <p class="text-sm text-gray-600 leading-relaxed mb-8">
                     Une sélection rigoureuse de fleurs de saison et de compositions durables.
@@ -297,7 +307,7 @@
                     <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></div>
                     <a href="#commander" class="absolute bottom-0 left-0 w-full border-t border-primary bg-white p-4 flex justify-between items-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-cream">
                         <div>
-                            <h3 class="font-display text-2xl text-primary">Moment 1</h3>
+                            <h3 class="font-display text-2xl text-primary">Essentiel</h3>
                             <p class="text-xs uppercase tracking-wider">Fleurs Fraîches</p>
                         </div>
                         <span class="text-xl transition-transform group-hover:translate-x-1">→</span>
@@ -312,7 +322,7 @@
                     <img src="images/bouquetSEC.jpg" alt="Bouquet de fleurs séchées durable - Collection Moment II - Fleuriste Nîmes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <a href="#commander" class="absolute bottom-0 left-0 w-full border-t border-primary bg-white p-4 flex justify-between items-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-cream">
                         <div>
-                            <h3 class="font-display text-2xl text-primary">Moment 2</h3>
+                            <h3 class="font-display text-2xl text-primary">Intemporel</h3>
                             <p class="text-xs uppercase tracking-wider">Fleurs Séchées</p>
                         </div>
                         <span class="text-xl transition-transform group-hover:translate-x-1">→</span>
@@ -327,7 +337,7 @@
                     <img src="images/global1.jpg" alt="Accessoires et objets décoratifs floraux - Collection Moment III - Fleuriste Nîmes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <a href="#commander" class="absolute bottom-0 left-0 w-full border-t border-primary bg-white p-4 flex justify-between items-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-cream">
                         <div>
-                            <h3 class="font-display text-2xl text-primary">Moment 3</h3>
+                            <h3 class="font-display text-2xl text-primary">Décoratif</h3>
                             <p class="text-xs uppercase tracking-wider">Objets</p>
                         </div>
                         <span class="text-xl transition-transform group-hover:translate-x-1">→</span>
@@ -357,7 +367,7 @@
                         Chaque composition raconte une histoire. La vôtre. Nous prenons le temps d'écouter vos envies pour créer l'inattendu.
                     </p>
                     <a href="#contact" class="inline-block border border-white px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-primary transition-colors">
-                        Prendre Rendez-vous
+                        Commander
                     </a>
                 </div>
             </div>
@@ -370,7 +380,7 @@
         <div class="md:hidden">
             <!-- Titre grand format -->
             <div class="bg-cream py-12 px-6 text-center border-b border-primary">
-                <span class="font-display text-6xl text-primary leading-none">Nature<br>Brute</span>
+                <span class="font-display text-6xl text-primary leading-none">Fleurs<br>de Nila</span>
             </div>
             <!-- Grille images - aspect ratio carré -->
             <div class="grid grid-cols-3">
@@ -378,7 +388,7 @@
                     <img src="images/closeUP1.jpg" alt="Texture délicate de pétales" class="w-full h-full object-cover">
                 </div>
                 <div class="border-r border-primary relative overflow-hidden aspect-square">
-                    <img src="images/aestethic2.jpg" alt="Composition florale esthétique" class="w-full h-full object-cover grayscale">
+                    <img src="images/aestethic2.jpg" alt="Composition florale esthétique" class="w-full h-full object-cover">
                 </div>
                 <div class="relative overflow-hidden aspect-square">
                     <img src="images/fleuristeRose.jpg" alt="Fleuriste créant un bouquet" class="w-full h-full object-cover">
@@ -396,12 +406,12 @@
             
             <!-- Texte Typo -->
             <div class="col-span-2 border-r border-primary bg-cream flex items-center justify-center p-6 text-center">
-                <span class="font-display text-5xl lg:text-6xl text-primary leading-none">Nature<br>Brute</span>
+                <span class="font-display text-5xl lg:text-6xl text-primary leading-none">Fleurs<br>de Nila</span>
             </div>
 
             <!-- Image 2 -->
             <div class="col-span-1 border-r border-primary relative group overflow-hidden">
-                <img src="images/aestethic2.jpg" alt="Composition florale esthétique en noir et blanc - Fleurs de Nila" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img src="images/aestethic2.jpg" alt="Composition florale esthétique - Fleurs de Nila" class="w-full h-full object-cover transition-all duration-500">
             </div>
 
             <!-- Bloc Couleur -->
@@ -431,35 +441,32 @@
             </div>
 
             <!-- Services Grid -->
-            <div class="lg:col-span-11 grid grid-cols-1 md:grid-cols-3">
+            <div class="lg:col-span-11 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <!-- Mariages -->
                 <div class="border-b md:border-b-0 md:border-r border-primary p-10 lg:p-16 flex flex-col justify-between hover:bg-white transition-colors h-full">
                     <div>
-                        <span class="text-4xl lg:text-6xl font-light block mb-4 opacity-20">01</span>
                         <h3 class="font-display text-4xl mb-4">Mariages</h3>
                         <p class="text-gray-600 leading-relaxed mb-8">
                             Bouquets de mariée, arches fleuries, centres de table. Une scénographie complète pour votre journée.
                         </p>
                     </div>
-                    <img src="images/SecEsthetique.png" alt="Décoration florale pour mariage - Bouquet de mariée et arche fleurie Nîmes" class="w-full h-64 object-cover border border-primary filter grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="images/SecEsthetique.png" alt="Décoration florale pour mariage - Bouquet de mariée et arche fleurie Nîmes" class="w-full h-64 object-cover border border-primary transition-all duration-500">
                 </div>
 
                 <!-- Entreprises -->
                 <div class="border-b md:border-b-0 md:border-r border-primary p-10 lg:p-16 flex flex-col justify-between hover:bg-white transition-colors h-full">
                     <div>
-                        <span class="text-4xl lg:text-6xl font-light block mb-4 opacity-20">02</span>
-                        <h3 class="font-display text-4xl mb-4">Pros</h3>
+                        <h3 class="font-display text-4xl mb-4">Professionnels</h3>
                         <p class="text-gray-600 leading-relaxed mb-8">
                             Abonnements d'entreprise, décoration de vitrines, événements corporatifs. L'élégance au service de votre image.
                         </p>
                     </div>
-                    <img src="images/SecEsthetique2.png" alt="Fleurs pour entreprises et professionnels - Décoration de bureaux et vitrines Nîmes" class="w-full h-64 object-cover border border-primary filter grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="images/SecEsthetique2.png" alt="Fleurs pour entreprises et professionnels - Décoration de bureaux et vitrines Nîmes" class="w-full h-64 object-cover border border-primary transition-all duration-500">
                 </div>
 
                 <!-- Réceptions -->
-                <div class="p-10 lg:p-16 flex flex-col justify-between hover:bg-white transition-colors h-full">
+                <div class="border-b md:border-b-0 md:border-r border-primary p-10 lg:p-16 flex flex-col justify-between hover:bg-white transition-colors h-full">
                     <div>
-                        <span class="text-4xl lg:text-6xl font-light block mb-4 opacity-20">03</span>
                         <h3 class="font-display text-4xl mb-4">Réceptions</h3>
                         <p class="text-gray-600 leading-relaxed mb-8">
                             Dîners privés, anniversaires, baptêmes. Des créations sur-mesure pour sublimer chaque instant.
@@ -468,6 +475,17 @@
                     <div class="border border-primary h-64 flex items-center justify-center bg-cream group cursor-pointer hover:bg-primary hover:text-white transition-colors">
                         <span class="font-display text-3xl">Devis Gratuit →</span>
                     </div>
+                </div>
+
+                <!-- Deuil -->
+                <div class="border-b md:border-b-0 md:border-r border-primary p-10 lg:p-16 flex flex-col justify-between hover:bg-white transition-colors h-full">
+                    <div>
+                        <h3 class="font-display text-4xl mb-4">Deuil</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Couronnes, gerbes et compositions florales. Des créations élégantes et respectueuses pour honorer la mémoire.
+                        </p>
+                    </div>
+                    <img src="images/SecEsthetique2.png" alt="Composition florale pour deuil - Couronne et gerbe fleuriste Nîmes" class="w-full h-64 object-cover border border-primary transition-all duration-500">
                 </div>
             </div>
         </div>
@@ -495,7 +513,9 @@
                 <img src="images/vertGlobal.jpg" alt="Arrangement végétal vert naturel - Plantes et feuillages Fleurs de Nila" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             </div>
             <div class="col-span-1 row-span-1 border-r border-b border-primary relative group overflow-hidden bg-primary text-white flex items-center justify-center p-4 text-center">
-                <p class="text-xs uppercase tracking-widest">Suivez-nous sur Instagram</p>
+                <a href="https://www.instagram.com/fleurs_de_nila" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-widest hover:text-accent transition-colors">
+                    Suivez-nous sur Instagram
+                </a>
             </div>
             <div class="col-span-2 row-span-1 border-b border-primary relative group overflow-hidden">
                 <img src="images/global1.jpg" alt="Vue d'ensemble de l'atelier floral - Boutique Fleurs de Nila Nîmes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -512,7 +532,7 @@
 
         <!-- Contenu -->
         <div class="relative z-10 max-w-4xl mx-auto px-8 py-20 text-center">
-            <p class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6">Philosophie</p>
+            <p class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6">Identité / valeurs</p>
             <h2 class="font-display text-5xl md:text-7xl lg:text-8xl text-primary leading-tight mb-8 mix-blend-multiply">
                 Chaque Pétale<br>Compte
             </h2>
@@ -525,6 +545,34 @@
         </div>
     </section>
 
+    <!-- Section À propos -->
+    <section id="apropos" class="w-full bg-white border-b border-primary">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="p-10 lg:p-16 border-b md:border-b-0 md:border-r border-primary flex items-center justify-center bg-cream">
+                <div class="max-w-md">
+                    <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 block">À propos</span>
+                    <h2 class="font-display text-5xl text-primary leading-tight mb-6">Fleurs de Nila</h2>
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        Fleurs de Nila est un atelier de fleuriste indépendant à Nîmes. Nous travaillons des fleurs de saison,
+                        fraîches et séchées, dans un esprit artisanal et poétique, pour les petits gestes du quotidien comme pour les grands événements.
+                    </p>
+                </div>
+            </div>
+            <div class="p-10 lg:p-16 flex items-center justify-center bg-white">
+                <div class="max-w-md">
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">
+                        Derrière chaque composition, il y a une écoute, une intention et un échange. Nous attachons une importance particulière
+                        aux matières, aux couleurs et aux textures pour créer des bouquets qui vous ressemblent.
+                    </p>
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        Que ce soit pour un abonnement floral, un mariage, un projet professionnel ou un simple bouquet à offrir,
+                        nous vous accompagnons pour trouver l’accord juste entre vos envies et notre savoir-faire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Abonnement & Infos Pratiques - Grid Split -->
     <section id="abonnement" class="w-full bg-white">
         <div class="grid grid-cols-1 lg:grid-cols-2 border-b border-primary">
@@ -532,12 +580,12 @@
             <div class="border-b lg:border-b-0 p-10 lg:p-16 flex flex-col justify-center bg-cream relative overflow-hidden group">
                 <!-- Image de fond subtile -->
                 <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none">
-                    <img src="images/bouquet2.jpg" alt="Abonnement floral mensuel - Livraison de fleurs fraîches Nîmes" class="w-full h-full object-cover grayscale">
+                    <img src="images/bouquet2.jpg" alt="Abonnement floral mensuel - Livraison de fleurs fraîches Nîmes" class="w-full h-full object-cover">
                 </div>
 
                 <div class="relative z-10 max-w-md mx-auto text-center border border-primary p-8 bg-white/80 backdrop-blur-sm">
                     <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 block">Formule Florale</span>
-                    <h2 class="font-display text-5xl mb-5 text-primary">L'Abonnement</h2>
+                    <h2 class="font-display text-5xl mb-5 text-primary">L'abonnement</h2>
                     <div class="w-12 h-px bg-primary mx-auto mb-5"></div>
                     <p class="text-base text-gray-600 mb-6 leading-relaxed italic">
                         "Le plaisir de recevoir des fleurs, sans y penser."
@@ -597,11 +645,11 @@
                     <!-- Question 3 -->
                     <div class="faq-item" data-index="3">
                         <div class="faq-question">
-                            <h3>Durée de vie des fleurs ?</h3>
+                            <h3>Quelles fleurs proposons-nous ?</h3>
                             <span class="faq-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Nos fleurs fraîches durent entre 7 et 10 jours avec un entretien adapté. Les fleurs séchées, elles, durent des années !</p>
+                            <p>Nous privilégions les fleurs de saison, fraîches ou séchées, choisies pour leur caractère et leur tenue afin de s’adapter à chaque occasion.</p>
                         </div>
                     </div>
 
@@ -631,11 +679,11 @@
         </div>
     </section>
 
-    <!-- Section Commander - Prendre Contact ou Venir -->
+    <!-- Section Commander - Nous contacter ou Venir -->
     <section id="commander" class="w-full bg-cream border-b border-primary">
         <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
             
-            <!-- Option 1 : Prendre Contact -->
+            <!-- Option 1 : Nous contacter -->
             <div class="border-b lg:border-b-0 lg:border-r border-primary p-12 lg:p-20 flex flex-col justify-center items-center text-center bg-white relative overflow-hidden group hover:bg-cream transition-colors duration-500">
                 <!-- Numéro décoratif -->
                 <span class="absolute top-8 left-8 text-8xl lg:text-9xl font-light text-primary/5 select-none">01</span>
@@ -647,7 +695,7 @@
                     </svg>
                 </div>
                 
-                <h3 class="font-display text-4xl lg:text-5xl text-primary mb-4">Prendre Contact</h3>
+                <h3 class="font-display text-4xl lg:text-5xl text-primary mb-4">Nous contacter</h3>
                 <p class="text-gray-600 max-w-sm mb-8 leading-relaxed">
                     Appelez-nous ou envoyez-nous un email pour passer commande ou demander un devis personnalisé.
                 </p>
@@ -694,7 +742,7 @@
                 <div class="mt-6 pt-6 border-t border-white/20">
                     <p class="text-sm uppercase tracking-widest text-accent mb-2">Horaires d'ouverture</p>
                     <p class="text-white/80">Mar — Sam : 10h — 19h</p>
-                    <p class="text-white/80">Dimanche : 10h30 — 13h</p>
+                    <p class="text-white/80">Dimanche : 10h — 13h</p>
                 </div>
                 
                 <div class="mt-10">
@@ -730,11 +778,16 @@
                 <h4 class="text-xs uppercase tracking-widest mb-6 text-accent">Nous trouver</h4>
                 <p class="text-2xl font-display mb-2">L'Atelier</p>
                 <p class="font-light text-white/80">3 rue Auguste-Pellet<br>30000 Nîmes</p>
+                <p class="mt-4">
+                    <a href="blog.html" class="text-xs uppercase tracking-widest text-accent hover:text-white transition-colors">
+                        Accéder au blog
+                    </a>
+                </p>
             </div>
 
             <!-- Contact Box -->
             <div class="p-10 border-b md:border-b-0 lg:border-r border-white/20">
-                <h4 class="text-xs uppercase tracking-widest mb-6 text-accent">Nous parler</h4>
+                <h4 class="text-xs uppercase tracking-widest mb-6 text-accent">Nous contacter</h4>
                 <p class="mb-4">
                     <a href="tel:0434390429" class="text-2xl hover:text-accent transition-colors">04 34 39 04 29</a>
                 </p>
@@ -748,16 +801,16 @@
                 <h4 class="text-xs uppercase tracking-widest mb-6 text-accent">Horaires</h4>
                 <table class="w-full text-sm font-light text-white/80">
                     <tr>
+                        <td class="pb-2 text-accent">Lundi</td>
+                        <td class="pb-2 text-right text-accent">Fermé</td>
+                    </tr>
+                    <tr>
                         <td class="pb-2">Mar — Sam</td>
                         <td class="pb-2 text-right">10h — 19h</td>
                     </tr>
                     <tr>
                         <td>Dimanche</td>
-                        <td class="text-right">10h30 — 13h</td>
-                    </tr>
-                    <tr>
-                        <td class="pt-4 text-accent">Lundi</td>
-                        <td class="pt-4 text-right text-accent">Fermé</td>
+                        <td class="text-right">10h — 13h</td>
                     </tr>
                 </table>
             </div>
@@ -768,19 +821,19 @@
                     <h4 class="text-xs uppercase tracking-widest mb-6 text-accent">Suivez-nous</h4>
                     <div class="flex flex-wrap gap-3">
                         <!-- Facebook -->
-                        <a href="#" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-300 group" aria-label="Facebook">
+                        <a href="https://www.facebook.com/fleurs.de.nila" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-300 group" aria-label="Facebook">
                             <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="#" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-transparent transition-all duration-300 group" aria-label="Instagram">
+                        <a href="https://www.instagram.com/fleurs_de_nila" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-transparent transition-all duration-300 group" aria-label="Instagram">
                             <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                             </svg>
                         </a>
                         <!-- TikTok -->
-                        <a href="#" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-black hover:border-black transition-all duration-300 group" aria-label="TikTok">
+                        <a href="https://www.tiktok.com/@fleurs_de_nila" class="social-icon w-11 h-11 border border-white/30 flex items-center justify-center hover:bg-black hover:border-black transition-all duration-300 group" aria-label="TikTok">
                             <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
                                 <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                             </svg>
@@ -794,7 +847,7 @@
                     </div>
                 </div>
                 <div class="mt-8 pt-8 border-t border-white/10">
-                    <p class="text-xs text-white/40">© 2025 Fleurs de Nila — Tous droits réservés</p>
+                    <p class="text-xs text-white/40">© 2026 Fleurs de Nila — Tous droits réservés</p>
                 </div>
             </div>
         </div>

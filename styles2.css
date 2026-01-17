@@ -287,54 +287,19 @@ section:has(.auto-rows-\[200px\]) {
 }
 
 @media (max-width: 640px) {
+    .top-marquee > div {
+        white-space: normal;
+        flex-wrap: wrap;
+        row-gap: 0.25rem;
+        column-gap: 0.75rem;
+        justify-content: center;
+    }
+
     .top-marquee {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
         font-size: 0.75rem;
         letter-spacing: 0.18em;
-    }
-
-    .top-marquee > div {
-        display: flex;
-        animation: carousel 15s linear infinite;
-        gap: 3rem;
-    }
-
-    @keyframes carousel {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    .top-marquee-item {
-        white-space: nowrap;
-        flex-shrink: 0;
-        min-width: max-content;
-    }
-
-    .top-marquee-item.separator {
-        display: none;
-    }
-}
-
-@media (min-width: 641px) {
-    .top-marquee > div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-    }
-
-    .top-marquee-item {
-        flex: 1;
-        text-align: center;
-    }
-
-    .top-marquee-item.separator {
-        display: inline;
     }
 }
 
