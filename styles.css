@@ -468,8 +468,8 @@ section:has(.auto-rows-\[200px\]) {
 }
 
 #abonnement > div {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Augmenter les espacements entre les éléments de texte */
