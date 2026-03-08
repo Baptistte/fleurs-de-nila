@@ -4,41 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="fr-FR">
+
+    <!-- Preconnect & Preload pour performances -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preload" as="font" href="FleurDeLeah-Regular.ttf" type="font/ttf" crossorigin>
+    <link rel="preload" as="image" href="images/IMG_3498.webp" fetchpriority="high">
 
     <!-- SEO Meta Tags -->
-    <title>Fleuriste Nîmes | Fleurs de Nila — Bouquets Artisanaux & Événementiel</title>
+    <title>Fleuriste à Nîmes | Fleurs de Nila — Bouquets & Livraison</title>
     <meta name="description"
-        content="Fleurs de Nila, fleuriste artisan à Nîmes. Bouquets de fleurs fraîches et séchées, compositions sur-mesure, décoration florale pour mariages et événements. Livraison sur Nîmes.">
+        content="Fleurs de Nila, artisan fleuriste à Nîmes. Bouquets fraîches & séchées, mariage, deuil, événementiel. Livraison Nîmes et alentours. Appelez le 04 34 39 04 29.">
     <meta name="keywords"
-        content="fleuriste Nîmes, bouquet fleurs Nîmes, fleurs séchées, mariage fleuriste, livraison fleurs Nîmes, composition florale, événementiel floral">
+        content="fleuriste Nîmes, bouquet fleurs Nîmes, fleurs séchées Nîmes, mariage fleuriste Nîmes, livraison fleurs Nîmes, composition florale, événementiel floral Nîmes, fleuriste artisan Gard">
     <meta name="author" content="Fleurs de Nila">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.fleursdenila.fr/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.fleursdenila.fr/">
-    <meta property="og:title" content="Fleuriste Nîmes | Fleurs de Nila — Bouquets Artisanaux">
+    <meta property="og:title" content="Fleuriste à Nîmes | Fleurs de Nila — Bouquets & Livraison">
     <meta property="og:description"
-        content="Fleuriste artisan à Nîmes. Bouquets de fleurs fraîches et séchées, compositions sur-mesure, décoration florale pour mariages et événements.">
+        content="Artisan fleuriste à Nîmes. Bouquets fraîches & séchées, compositions sur-mesure, mariage, deuil. Livraison Nîmes et alentours.">
     <meta property="og:image" content="https://www.fleursdenila.fr/images/devanture1.webp">
+    <meta property="og:image:width" content="5712">
+    <meta property="og:image:height" content="4284">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Fleurs de Nila">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.fleursdenila.fr/">
-    <meta name="twitter:title" content="Fleuriste Nîmes | Fleurs de Nila — Bouquets Artisanaux">
+    <meta name="twitter:title" content="Fleuriste à Nîmes | Fleurs de Nila — Bouquets & Livraison">
     <meta name="twitter:description"
-        content="Fleuriste artisan à Nîmes. Bouquets de fleurs fraîches et séchées, compositions sur-mesure, décoration florale pour mariages et événements.">
+        content="Artisan fleuriste à Nîmes. Bouquets fraîches & séchées, mariage, deuil, livraison. 04 34 39 04 29.">
     <meta name="twitter:image" content="https://www.fleursdenila.fr/images/devanture1.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/RoyalBlue.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/RoyalBlue.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="images/RoyalBlue.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="images/RoyalBlue.webp">
     <link rel="apple-touch-icon" href="images/RoyalBlue.webp">
 
-    <!-- Geo Tags pour SEO local -->
+    <!-- Geo Tags pour SEO local France -->
     <meta name="geo.region" content="FR-30">
     <meta name="geo.placename" content="Nîmes">
     <meta name="geo.position" content="43.835957;4.358892">
@@ -115,9 +123,22 @@
             "name": "Nîmes"
         },
         "sameAs": [
-            "https://www.facebook.com/fleursdenila",
-            "https://www.instagram.com/fleursdenila"
-        ]
+            "https://www.facebook.com/fleurs.de.nila",
+            "https://www.instagram.com/fleurs_de_nila",
+            "https://www.tiktok.com/@fleurs_de_nila"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Nos collections florales",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bouquets de fleurs fraîches"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bouquets de fleurs séchées"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Décoration florale mariage"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Compositions florales deuil"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Abonnement floral"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livraison de fleurs à Nîmes"}}
+            ]
+        }
     }
     </script>
 
@@ -170,6 +191,90 @@
         ]
     }
     </script>
+
+    <!-- Schema.org - WebSite (AI & Search discovery) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Fleurs de Nila",
+        "alternateName": "Fleuriste Nîmes Fleurs de Nila",
+        "url": "https://www.fleursdenila.fr",
+        "description": "Fleurs de Nila, artisan fleuriste à Nîmes. Bouquets de fleurs fraîches et séchées, compositions sur-mesure, décoration florale pour mariages, deuil et événements. Livraison sur Nîmes et alentours.",
+        "inLanguage": "fr-FR",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Fleurs de Nila",
+            "url": "https://www.fleursdenila.fr",
+            "logo": "https://www.fleursdenila.fr/images/RoyalBlue.webp"
+        }
+    }
+    </script>
+
+    <!-- Schema.org - Service Livraison -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Livraison de fleurs",
+        "name": "Livraison de fleurs à Nîmes",
+        "description": "Service de livraison de bouquets de fleurs fraîches et séchées à domicile sur Nîmes et son agglomération. Livraison du mardi au dimanche par votre artisan fleuriste.",
+        "provider": {
+            "@type": "Florist",
+            "name": "Fleurs de Nila",
+            "url": "https://www.fleursdenila.fr",
+            "telephone": "+33434390429",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "3 rue Auguste-Pellet",
+                "addressLocality": "Nîmes",
+                "postalCode": "30000",
+                "addressCountry": "FR"
+            }
+        },
+        "areaServed": [
+            {"@type": "City", "name": "Nîmes", "sameAs": "https://fr.wikipedia.org/wiki/N%C3%AEmes"},
+            {"@type": "City", "name": "Marguerittes"},
+            {"@type": "City", "name": "Milhaud"},
+            {"@type": "City", "name": "Caveirac"},
+            {"@type": "City", "name": "Bouillargues"},
+            {"@type": "City", "name": "Caissargues"},
+            {"@type": "City", "name": "Garons"},
+            {"@type": "City", "name": "Saint-Gilles"},
+            {"@type": "City", "name": "Manduel"},
+            {"@type": "City", "name": "Redessan"},
+            {"@type": "City", "name": "Bernis"},
+            {"@type": "City", "name": "Générac"},
+            {"@type": "City", "name": "Vauvert"}
+        ],
+        "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "10",
+                "minPrice": "10",
+                "maxPrice": "15",
+                "priceCurrency": "EUR"
+            },
+            "availability": "https://schema.org/InStock"
+        },
+        "url": "https://www.fleursdenila.fr/article3.html"
+    }
+    </script>
+
+    <!-- Schema.org - Speakable (pour assistants IA vocaux) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Fleuriste à Nîmes — Fleurs de Nila",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#accueil h1", "#accueil p", "#evenementiel h2", "#apropos p"]
+        },
+        "url": "https://www.fleursdenila.fr/"
+    }
+    </script>
 </head>
 
 <body class="font-sans text-primary bg-cream antialiased selection:bg-primary selection:text-white">
@@ -181,8 +286,8 @@
             <div class="flex items-center justify-between">
                 <div class="flex-1"></div>
                 <a href="#" class="transition-opacity hover:opacity-80 flex-shrink-0">
-                    <img src="images/RoyalBlueText.webp" alt="Fleurs de Nila - Fleuriste artisan Nîmes"
-                        class="h-16 sm:h-20 w-auto">
+                    <img src="images/RoyalBlueText.webp" alt="Fleurs de Nila - Fleuriste artisan Nîmes" width="1013"
+                        height="564" class="h-16 sm:h-20 w-auto">
                 </a>
                 <div class="flex-1 flex justify-end">
                     <button id="mobile-menu-btn" class="text-primary p-1">
@@ -199,8 +304,8 @@
         <div class="hidden lg:grid w-full grid-cols-[20%_70%]">
             <div class="px-6 lg:px-12 xl:px-16 py-4 flex items-center h-24">
                 <a href="#" class="transition-opacity hover:opacity-80">
-                    <img src="images/RoyalBlueText.webp" alt="Fleurs de Nila - Fleuriste artisan Nîmes"
-                        class="h-16 lg:h-20 w-auto">
+                    <img src="images/RoyalBlueText.webp" alt="Fleurs de Nila - Fleuriste artisan Nîmes" width="1013"
+                        height="564" class="h-16 lg:h-20 w-auto">
                 </a>
             </div>
 
@@ -209,8 +314,6 @@
                     <a href="#accueil" class="nav-link text-sm lg:text-base xl:text-lg">Accueil</a>
                     <a href="#collections" class="nav-link text-sm lg:text-base xl:text-lg">Collections</a>
                     <a href="#evenementiel" class="nav-link text-sm lg:text-base xl:text-lg">Événementiel</a>
-                    <a href="#abonnement"
-                        class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">Abonnement</a>
                     <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                         rel="noopener noreferrer" class="nav-link text-sm lg:text-base xl:text-lg">Boutique</a>
                     <a href="#apropos" class="nav-link text-sm lg:text-base xl:text-lg">À propos</a>
@@ -234,7 +337,6 @@
             <a href="#accueil" class="mobile-nav-link text-6xl">Accueil</a>
             <a href="#collections" class="mobile-nav-link text-6xl">Collections</a>
             <a href="#evenementiel" class="mobile-nav-link text-6xl">Événementiel</a>
-            <a href="#abonnement" class="mobile-nav-link text-6xl">Abonnement</a>
             <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                 rel="noopener noreferrer" class="mobile-nav-link text-6xl">Boutique</a>
             <a href="#apropos" class="mobile-nav-link text-6xl">À propos</a>
@@ -277,10 +379,10 @@
             <!-- Zone Image (droite - ~65%) -->
             <div class="lg:col-span-8 relative min-h-[50vh] lg:min-h-0">
                 <picture>
-                    <source srcset="images/IMG_3498.webp" type="image/jpeg">
-                    <img src="images/IMG_3498.webp"
-                        alt="Détail macro d'une composition florale artisanale - Fleurs de Nila Nîmes"
-                        class="absolute inset-0 w-full h-full object-cover">
+                    <source srcset="images/IMG_3498.webp" type="image/webp">
+                    <img src="images/IMG_3498.webp" fetchpriority="high"
+                        alt="Détail macro d'une composition florale artisanale - Fleurs de Nila Nîmes" width="1050"
+                        height="1400" class="absolute inset-0 w-full h-full object-cover">
                 </picture>
 
                 <!-- Badge Néo-Brutalist -->
@@ -330,8 +432,9 @@
                 <!-- Item 1 -->
                 <article
                     class="group relative border-b md:border-b-0 lg:border-r border-primary aspect-[4/5] overflow-hidden">
-                    <img src="images/bouquet2.webp"
-                        alt="Bouquet de fleurs fraîches de saison - Collection Moment I - Fleuriste Nîmes"
+                    <img src="images/bouquet2.webp" loading="lazy"
+                        alt="Bouquet de fleurs fraîches de saison - Collection Moment I - Fleuriste Nîmes" width="675"
+                        height="900"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300">
                     </div>
@@ -352,8 +455,9 @@
                 <!-- Item 2 -->
                 <article
                     class="group relative border-b md:border-b-0 lg:border-r border-primary aspect-[4/5] overflow-hidden">
-                    <img src="images/photo1_0302.webp"
-                        alt="Bouquet de fleurs séchées - Collection Moment II - Fleuriste Nîmes"
+                    <img src="images/photo1_0302.webp" loading="lazy"
+                        alt="Bouquet de fleurs séchées - Collection Moment II - Fleuriste Nîmes" width="1200"
+                        height="1600"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <a href="#commander"
                         class="absolute bottom-0 left-0 w-full border-t border-primary bg-white p-4 flex justify-between items-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-cream">
@@ -371,8 +475,9 @@
 
                 <!-- Item 3 -->
                 <article class="group relative aspect-[4/5] overflow-hidden">
-                    <img src="images/global1.webp"
+                    <img src="images/global1.webp" loading="lazy"
                         alt="Accessoires et objets décoratifs floraux - Collection Moment III - Fleuriste Nîmes"
+                        width="675" height="900"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <a href="#commander"
                         class="absolute bottom-0 left-0 w-full border-t border-primary bg-white p-4 flex justify-between items-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-cream">
@@ -394,8 +499,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 border-b border-primary">
             <div
                 class="aspect-square md:aspect-[16/9] border-b md:border-b-0 md:border-r border-primary relative overflow-hidden group">
-                <img src="images/fleurSpe1.webp"
-                    alt="Création florale sur mesure personnalisée - Fleuriste artisan Nîmes"
+                <img src="images/fleurSpe1.webp" loading="lazy"
+                    alt="Création florale sur mesure personnalisée - Fleuriste artisan Nîmes" width="900" height="1200"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div
@@ -433,16 +538,16 @@
             <!-- Grille images - aspect ratio carré -->
             <div class="grid grid-cols-3">
                 <div class="border-r border-primary relative overflow-hidden aspect-square">
-                    <img src="images/photofondbleu1.webp" alt="Texture délicate de pétales"
-                        class="w-full h-full object-cover">
+                    <img src="images/photofondbleu1.webp" loading="lazy" alt="Texture délicate de pétales" width="4032"
+                        height="3024" class="w-full h-full object-cover">
                 </div>
                 <div class="border-r border-primary relative overflow-hidden aspect-square">
-                    <img src="images/photofondbleu2.webp" alt="Composition florale esthétique"
-                        class="w-full h-full object-cover">
+                    <img src="images/photofondbleu2.webp" loading="lazy" alt="Composition florale esthétique"
+                        width="5712" height="4284" class="w-full h-full object-cover">
                 </div>
                 <div class="relative overflow-hidden aspect-square">
-                    <img src="images/photofondbleu3.webp" alt="Fleuriste créant un bouquet"
-                        class="w-full h-full object-cover">
+                    <img src="images/photofondbleu3.webp" loading="lazy" alt="Fleuriste créant un bouquet" width="1536"
+                        height="2048" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-primary/20"></div>
                 </div>
             </div>
@@ -452,7 +557,8 @@
         <div class="hidden md:grid md:grid-cols-4 lg:grid-cols-6 h-80">
             <!-- Image 1 -->
             <div class="col-span-1 border-r border-primary relative group overflow-hidden">
-                <img src="images/closeUP1.webp" alt="Texture délicate de pétales - Détail floral artisanal"
+                <img src="images/closeUP1.webp" loading="lazy"
+                    alt="Texture délicate de pétales - Détail floral artisanal" width="4284" height="5712"
                     class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
             </div>
 
@@ -463,20 +569,22 @@
 
             <!-- Image 2 -->
             <div class="col-span-1 border-r border-primary relative group overflow-hidden">
-                <img src="images/photofondbleu1.webp" alt="Composition florale esthétique - Fleurs de Nila"
+                <img src="images/photofondbleu1.webp" loading="lazy"
+                    alt="Composition florale esthétique - Fleurs de Nila" width="4032" height="3024"
                     class="w-full h-full object-cover transition-all duration-500">
             </div>
 
             <div class="col-span-1 border-r border-primary relative group overflow-hidden">
-                <img src="images/photofondbleu2.webp" alt="Composition florale esthétique - Fleurs de Nila"
+                <img src="images/photofondbleu2.webp" loading="lazy"
+                    alt="Composition florale esthétique - Fleurs de Nila" width="5712" height="4284"
                     class="w-full h-full object-cover transition-all duration-500">
             </div>
 
 
             <!-- Image 3 -->
             <div class="col-span-1 relative group overflow-hidden">
-                <img src="images/photofondbleu3.webp"
-                    alt="Fleuriste créant un bouquet de roses à Nîmes - Fleurs de Nila"
+                <img src="images/photofondbleu3.webp" loading="lazy"
+                    alt="Fleuriste créant un bouquet de roses à Nîmes - Fleurs de Nila" width="1536" height="2048"
                     class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
                 <div class="absolute inset-0 bg-primary/20"></div>
             </div>
@@ -510,9 +618,9 @@
                             journée.
                         </p>
                     </div>
-                    <img src="images/mariage.webp"
-                        alt="Décoration florale pour mariage - Bouquet de mariée et arche fleurie Nîmes"
-                        class="w-full h-64 object-cover transition-all duration-500">
+                    <img src="images/mariage.webp" loading="lazy"
+                        alt="Décoration florale pour mariage - Bouquet de mariée et arche fleurie Nîmes" width="1536"
+                        height="2048" class="w-full h-64 object-cover transition-all duration-500">
                 </div>
 
                 <!-- Entreprises -->
@@ -525,9 +633,9 @@
                             service de votre image.
                         </p>
                     </div>
-                    <img src="images/professionnel.webp"
+                    <img src="images/professionnel.webp" loading="lazy"
                         alt="Fleurs pour entreprises et professionnels - Décoration de bureaux et vitrines Nîmes"
-                        class="w-full h-64 object-cover transition-all duration-500">
+                        width="1536" height="2048" class="w-full h-64 object-cover transition-all duration-500">
                 </div>
 
                 <!-- Réceptions -->
@@ -556,9 +664,9 @@
                             honorer la mémoire.
                         </p>
                     </div>
-                    <img src="images/IMG_4355.webp"
-                        alt="Composition florale pour deuil - Couronne et gerbe fleuriste Nîmes"
-                        class="w-full h-64 object-cover transition-all duration-500">
+                    <img src="images/IMG_4355.webp" loading="lazy"
+                        alt="Composition florale pour deuil - Couronne et gerbe fleuriste Nîmes" width="3024"
+                        height="4032" class="w-full h-64 object-cover transition-all duration-500">
                 </div>
             </div>
         </div>
@@ -568,8 +676,8 @@
     <section class="w-full bg-white border-b border-primary">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 auto-rows-[200px] md:auto-rows-[300px]">
             <div class="col-span-2 row-span-2 border-r border-b border-primary relative group overflow-hidden">
-                <img src="images/IMG_3041.webp"
-                    alt="Bouquet de fleurs séchées aux tons bleutés - Galerie Fleurs de Nila"
+                <img src="images/IMG_3041.webp" loading="lazy"
+                    alt="Bouquet de fleurs séchées aux tons bleutés - Galerie Fleurs de Nila" width="1536" height="2048"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div
                     class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300 pointer-events-none">
@@ -580,18 +688,21 @@
                 <p class="font-display text-3xl text-white transform rotate-[-15deg]">Galerie</p>
             </div>
             <div class="col-span-1 row-span-1 border-r border-b border-primary relative group overflow-hidden">
-                <img src="images/vase1.webp" alt="Vase décoratif avec arrangement floral élégant - Fleuriste Nîmes"
+                <img src="images/vase1.webp" loading="lazy"
+                    alt="Vase décoratif avec arrangement floral élégant - Fleuriste Nîmes" width="3024" height="4032"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             </div>
             <div class="col-span-2 row-span-1 border-b border-primary relative group overflow-hidden">
-                <img src="images/rougeBeau.webp" alt="Composition florale rouge passion - Bouquet romantique Nîmes"
+                <img src="images/rougeBeau.webp" loading="lazy"
+                    alt="Composition florale rouge passion - Bouquet romantique Nîmes" width="3024" height="4032"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             </div>
 
             <!-- Row 2 filler for logic -->
             <div class="col-span-1 row-span-1 border-r border-b border-primary relative group overflow-hidden">
-                <img src="images/vertGlobal.webp"
-                    alt="Arrangement végétal vert naturel - Plantes et feuillages Fleurs de Nila"
+                <img src="images/vertGlobal.webp" loading="lazy"
+                    alt="Arrangement végétal vert naturel - Plantes et feuillages Fleurs de Nila" width="4284"
+                    height="5712"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             </div>
             <div
@@ -602,7 +713,8 @@
                 </a>
             </div>
             <div class="col-span-2 row-span-1 border-b border-primary relative group overflow-hidden">
-                <img src="images/global1.webp" alt="Vue d'ensemble de l'atelier floral - Boutique Fleurs de Nila Nîmes"
+                <img src="images/global1.webp" loading="lazy"
+                    alt="Vue d'ensemble de l'atelier floral - Boutique Fleurs de Nila Nîmes" width="4284" height="5712"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             </div>
         </div>
@@ -652,7 +764,8 @@
             </div>
             <div class="p-10 lg:p-16 flex items-center justify-center bg-white">
                 <div class="max-w-md w-full group">
-                    <img src="images/IMG_0302.webp" alt="Fleurs de Nila - Atelier fleuriste"
+                    <img src="images/IMG_0302.webp" loading="lazy" alt="Fleurs de Nila - Atelier fleuriste" width="5712"
+                        height="4284"
                         class="w-full h-auto object-cover border border-primary group-hover:scale-105 transition-transform duration-500">
                 </div>
             </div>
@@ -695,11 +808,21 @@
                     </a>
                 </div>
 
-                <div class="mt-10">
+                <div class="mt-10 flex flex-col items-center gap-4">
                     <a href="tel:0434390429"
                         class="inline-block border-2 border-primary px-10 py-4 uppercase tracking-widest text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300">
                         Appeler Maintenant
                     </a>
+                    <button onclick="document.getElementById('delivery-modal').classList.remove('hidden')"
+                        class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors cursor-pointer mt-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Voir les zones de livraison
+                    </button>
                 </div>
             </div>
 
@@ -751,7 +874,7 @@
         <div class="w-full h-72 md:h-96">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.8426771644847!2d4.358892476545686!3d43.83595707109657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42c6e79d9e2af%3A0x8e6e8e6e8e6e8e6e!2s3%20Rue%20Auguste%20Pellet%2C%2030000%20N%C3%AEmes%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 title="Localisation de la boutique Fleurs de Nila - 3 rue Auguste-Pellet, 30000 Nîmes">
             </iframe>
@@ -767,7 +890,8 @@
                 <!-- Image de fond subtile -->
                 <div
                     class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none">
-                    <img src="images/bouquet2.webp" alt="Abonnement floral mensuel - Livraison de fleurs fraîches Nîmes"
+                    <img src="images/bouquet2.webp" loading="lazy"
+                        alt="Abonnement floral mensuel - Livraison de fleurs fraîches Nîmes" width="2316" height="3088"
                         class="w-full h-full object-cover">
                 </div>
 
@@ -974,6 +1098,24 @@
                 </div>
             </div>
         </div>
+        <!-- NAP & Zones de livraison (SEO local) -->
+        <div class="border-t border-white/10 px-10 py-8">
+            <div class="max-w-5xl mx-auto text-center">
+                <p class="text-sm font-medium text-white/90 mb-2">
+                    <strong>Fleurs de Nila</strong> — Artisan fleuriste à Nîmes
+                </p>
+                <p class="text-xs text-white/60 mb-3">
+                    3 rue Auguste-Pellet, 30000 Nîmes, France · Tél : <a href="tel:0434390429"
+                        class="text-accent hover:text-white transition-colors">04 34 39 04 29</a> · Email : <a
+                        href="mailto:fleursdenila@icloud.com"
+                        class="text-accent hover:text-white transition-colors">fleursdenila@icloud.com</a>
+                </p>
+                <p class="text-xs text-white/40">
+                    Livraison de fleurs : Nîmes, Marguerittes, Milhaud, Caveirac, Bouillargues, Caissargues, Garons,
+                    Saint-Gilles, Manduel, Redessan, Bernis, Générac, Vauvert et environs.
+                </p>
+            </div>
+        </div>
     </footer>
 
     <style>
@@ -983,6 +1125,157 @@
     </style>
 
     <script src="script.js"></script>
+
+    <!-- Modal Zones de Livraison -->
+    <div id="delivery-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-primary/60 backdrop-blur-sm"
+            onclick="document.getElementById('delivery-modal').classList.add('hidden')"></div>
+
+        <!-- Contenu modal -->
+        <div class="relative bg-white border-2 border-primary max-w-lg w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <!-- Header -->
+            <div class="sticky top-0 bg-primary text-white px-8 py-5 flex items-center justify-between z-10">
+                <h3 class="text-xs uppercase tracking-[0.25em] font-medium">Zones & Tarifs de livraison</h3>
+                <button onclick="document.getElementById('delivery-modal').classList.add('hidden')"
+                    class="text-white/70 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Tableau codes postaux -->
+            <div class="px-8 pt-6 pb-4">
+                <p class="text-xs uppercase tracking-widest text-secondary mb-4">Codes postaux desservis</p>
+                <div class="grid grid-cols-2 gap-x-6">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-primary/20">
+                                <th
+                                    class="text-left pb-2 text-xs uppercase tracking-widest text-primary/60 font-medium">
+                                    Code</th>
+                                <th
+                                    class="text-right pb-2 text-xs uppercase tracking-widest text-primary/60 font-medium">
+                                    Tarif</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30000</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30128</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30129</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30132</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30190</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30230</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30300</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1.5">30320</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-primary/20">
+                                <th
+                                    class="text-left pb-2 text-xs uppercase tracking-widest text-primary/60 font-medium">
+                                    Code</th>
+                                <th
+                                    class="text-right pb-2 text-xs uppercase tracking-widest text-primary/60 font-medium">
+                                    Tarif</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30540</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30620</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30730</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30820</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30870</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1.5">30900</td>
+                                <td class="text-right font-medium">10 €</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1.5">30980</td>
+                                <td class="text-right font-medium">15 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Horaires de livraison -->
+            <div class="px-8 py-4 border-t border-primary/10">
+                <p class="text-xs uppercase tracking-widest text-secondary mb-3">Horaires de livraison</p>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-gray-700">
+                    <span>Mardi</span><span class="text-right">10h — 19h</span>
+                    <span>Mercredi</span><span class="text-right">10h — 19h</span>
+                    <span>Jeudi</span><span class="text-right">10h — 19h</span>
+                    <span>Vendredi</span><span class="text-right">10h — 19h</span>
+                    <span>Samedi</span><span class="text-right">10h — 19h</span>
+                    <span>Dimanche</span><span class="text-right">10h — 13h</span>
+                </div>
+            </div>
+
+            <!-- Dates exceptionnelles -->
+            <div class="px-8 py-4 border-t border-primary/10">
+                <p class="text-xs uppercase tracking-widest text-secondary mb-3">Livraison exceptionnelle possible</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1.5 bg-cream border border-primary/20 text-primary">01 mars 2026</span>
+                    <span class="text-xs px-3 py-1.5 bg-cream border border-primary/20 text-primary">01 nov. 2026</span>
+                    <span class="text-xs px-3 py-1.5 bg-cream border border-primary/20 text-primary">24 déc. 2026</span>
+                    <span class="text-xs px-3 py-1.5 bg-cream border border-primary/20 text-primary">31 déc. 2026</span>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="px-8 py-5 bg-cream border-t border-primary/10">
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Ces zones ou créneaux vous conviennent ?
+                    <a href="https://www.sessile.fr/trouvez-votre-fleuriste/" target="_blank" rel="noopener noreferrer"
+                        class="text-secondary hover:text-primary underline transition-colors">Visitez la boutique en
+                        ligne</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

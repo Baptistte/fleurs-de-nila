@@ -1,0 +1,62 @@
+# ============================================================
+# Fleurs de Nila — .htaccess Performance & Cache
+# ============================================================
+
+# --- Compression Gzip/Deflate ---
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/woff font/woff2 application/font-woff2
+</IfModule>
+
+# --- Cache-Control (navigateur) ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/webp  "access plus 1 year"
+    ExpiresByType image/jpeg  "access plus 1 year"
+    ExpiresByType image/png   "access plus 1 year"
+    ExpiresByType image/gif   "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/ttf    "access plus 1 year"
+    ExpiresByType font/woff   "access plus 1 year"
+    ExpiresByType font/woff2  "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # CSS & JS (versionnés si possible, sinon 1 mois)
+    ExpiresByType text/css               "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript        "access plus 1 month"
+
+    # HTML (court pour permettre les mises à jour)
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Headers de cache explicites (fallback si mod_expires absent)
+<IfModule mod_headers.c>
+    # Images et fonts : 1 an
+    <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico|ttf|woff|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    # CSS & JS : 1 mois
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    # HTML : 1 heure
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+
+    # Sécurité headers de base
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# --- MIME types ---
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType font/woff2 .woff2
+    AddType font/woff  .woff
+</IfModule>

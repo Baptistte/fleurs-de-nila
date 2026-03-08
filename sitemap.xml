@@ -5,11 +5,10 @@
     <!-- Page principale -->
     <url>
         <loc>https://www.fleursdenila.fr/</loc>
-        <lastmod>2025-12-16</lastmod>
+        <lastmod>2026-02-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
-        <!-- Images principales pour Google Images -->
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/devanture1.webp</image:loc>
             <image:title>Devanture de la boutique Fleurs de Nila à Nîmes</image:title>
@@ -18,57 +17,77 @@
         
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/bouquet2.webp</image:loc>
-            <image:title>Bouquet de fleurs fraîches de saison</image:title>
+            <image:title>Bouquet de fleurs fraîches de saison - Fleuriste Nîmes</image:title>
             <image:caption>Composition florale artisanale avec fleurs de saison - Fleurs de Nila</image:caption>
         </image:image>
         
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/bouquetSEC.webp</image:loc>
-            <image:title>Bouquet de fleurs séchées</image:title>
-            <image:caption>Bouquet de fleurs séchées durable - Fleuriste Nîmes</image:caption>
-        </image:image>
-        
-        <image:image>
-            <image:loc>https://www.fleursdenila.fr/images/SecEsthetique.webp</image:loc>
-            <image:title>Décoration florale pour mariage</image:title>
-            <image:caption>Création florale pour mariage et événements - Fleurs de Nila Nîmes</image:caption>
+            <image:title>Bouquet de fleurs séchées - Fleuriste Nîmes</image:title>
+            <image:caption>Bouquet de fleurs séchées durable - Fleuriste artisan Nîmes</image:caption>
         </image:image>
         
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/closeUP1.webp</image:loc>
-            <image:title>Détail d'une composition florale</image:title>
-            <image:caption>Macro détail de pétales - Art floral artisanal</image:caption>
+            <image:title>Détail composition florale artisanale Nîmes</image:title>
+            <image:caption>Macro détail de pétales - Art floral artisanal Fleurs de Nila</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/mariage.webp</image:loc>
+            <image:title>Décoration florale mariage Nîmes</image:title>
+            <image:caption>Création florale pour mariage par Fleurs de Nila, fleuriste à Nîmes</image:caption>
         </image:image>
     </url>
     
-    <!-- Sections avec ancres (pour référence, même si c'est une SPA) -->
+    <!-- Blog -->
     <url>
-        <loc>https://www.fleursdenila.fr/#collections</loc>
-        <lastmod>2025-12-16</lastmod>
+        <loc>https://www.fleursdenila.fr/blog.html</loc>
+        <lastmod>2026-02-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
+    <!-- Article 1 : Entretien bouquets -->
     <url>
-        <loc>https://www.fleursdenila.fr/#evenementiel</loc>
-        <lastmod>2025-12-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.fleursdenila.fr/#abonnement</loc>
-        <lastmod>2025-12-16</lastmod>
+        <loc>https://www.fleursdenila.fr/article1.html</loc>
+        <lastmod>2026-02-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/bouquet2.webp</image:loc>
+            <image:title>Conseils entretien bouquet de fleurs fraîches</image:title>
+            <image:caption>Comment prolonger la tenue de vos bouquets - Fleurs de Nila Nîmes</image:caption>
+        </image:image>
     </url>
     
+    <!-- Article 2 : Fleurs séchées déco -->
     <url>
-        <loc>https://www.fleursdenila.fr/#contact</loc>
-        <lastmod>2025-12-16</lastmod>
+        <loc>https://www.fleursdenila.fr/article2.html</loc>
+        <lastmod>2026-02-24</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.7</priority>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/bouquetSEC.webp</image:loc>
+            <image:title>Idées décoration fleurs séchées</image:title>
+            <image:caption>Fleurs séchées décoration intérieure - Fleurs de Nila Nîmes</image:caption>
+        </image:image>
     </url>
-    
-</urlset>
 
+    <!-- Article 3 : Livraison de fleurs à Nîmes -->
+    <url>
+        <loc>https://www.fleursdenila.fr/article3.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        
+        <image:image>
+            <image:loc>https://www.fleursdenila.fr/images/devanture1.webp</image:loc>
+            <image:title>Livraison de fleurs à Nîmes - Boutique Fleurs de Nila</image:title>
+            <image:caption>Service de livraison de fleurs à domicile à Nîmes et agglomération par Fleurs de Nila</image:caption>
+        </image:image>
+    </url>
+
+</urlset>

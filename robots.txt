@@ -7,14 +7,26 @@ Allow: /
 # Sitemap
 Sitemap: https://www.fleursdenila.fr/sitemap.xml
 
-# Interdire l'accès aux dossiers de backup et documentation
+# Interdire l'accès aux dossiers inutiles
 Disallow: /images_backup/
 Disallow: /doc/
 
-# Autoriser tous les crawlers à indexer les images
+# Autoriser l'indexation des images
 User-agent: Googlebot-Image
 Allow: /images/
 
-# Délai entre les requêtes (en secondes) - optionnel, pour ne pas surcharger le serveur
-Crawl-delay: 1
+# Autoriser les IA (ChatGPT, Perplexity, etc.)
+User-agent: GPTBot
+Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
