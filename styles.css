@@ -1,7 +1,7 @@
 /* Import police personnalisée */
 @font-face {
     font-family: 'Fleur de Leah';
-    src: url('FleurDeLeah-Regular.ttf') format('truetype');
+    src: url('FleurDeLeah-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -67,13 +67,11 @@ body {
 }
 
 /* =========================================
-   Navigation Styles (CORRIGÉ)
+   Navigation Styles
    ========================================= */
 #nav {
-    /* Suppression du border-bottom: none pour laisser Tailwind gérer la bordure */
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    /* Sécurité pour le layout fixe */
     position: fixed;
     top: 0;
     width: 100%;
@@ -99,7 +97,7 @@ body {
     padding: 0;
     height: auto;
     border: none;
-    display: inline-block; /* Changé de inline à inline-block pour la stabilité */
+    display: inline-block;
 }
 
 .nav-link::after {
@@ -227,7 +225,7 @@ h1, h2, h3, h4 {
     background: rgba(26, 54, 93, 0.9);
 }
 
-/* Hide scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -249,7 +247,6 @@ h1, h2, h3, h4 {
 }
 
 /* Espacement global des sections */
-/* Note: Le padding-top ajouté dans le HTML (pt-16/pt-20) surchargera proprement ce margin 0 */
 section {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -342,12 +339,10 @@ section:has(.auto-rows-\[200px\]) {
    FAQ Accordéon - Responsive
    ======================================== */
 
-/* Header FAQ */
 .faq-header {
     flex-shrink: 0;
 }
 
-/* ---- MOBILE : Accordéon classique ---- */
 .faq-accordion-container {
     display: flex;
     flex-direction: column;
@@ -396,7 +391,6 @@ section:has(.auto-rows-\[200px\]) {
     background-color: rgba(250, 250, 250, 0.5);
 }
 
-/* Réponse - Mobile : max-height animation */
 .faq-answer {
     max-height: 0;
     padding: 0 1.5rem;
@@ -418,7 +412,6 @@ section:has(.auto-rows-\[200px\]) {
     margin: 0;
 }
 
-/* ---- DESKTOP : Hauteur constante avec flex ---- */
 @media (min-width: 1024px) {
     .faq-accordion-container {
         flex-grow: 1;
@@ -453,7 +446,7 @@ section:has(.auto-rows-\[200px\]) {
     }
 }
 
-/* Espacement interne augmenté pour les sections */
+/* Espacement interne des sections */
 #collections > div:first-child {
     padding-top: 4rem;
 }
@@ -472,7 +465,6 @@ section:has(.auto-rows-\[200px\]) {
     padding-bottom: 0;
 }
 
-/* Augmenter les espacements entre les éléments de texte */
 #collections p,
 #collections h2,
 #collections h3 {
@@ -489,7 +481,6 @@ section:has(.auto-rows-\[200px\]) {
     margin-bottom: 1.5rem;
 }
 
-/* Espacement supplémentaire pour les listes */
 #abonnement ul {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
@@ -505,7 +496,6 @@ section:has(.auto-rows-\[200px\]) {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-    will-change: opacity, transform;
 }
 
 .reveal.active {
@@ -534,7 +524,6 @@ section:has(.auto-rows-\[200px\]) {
 
 .hover-lift {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    will-change: transform;
 }
 
 .hover-lift:hover {
@@ -546,7 +535,6 @@ section:has(.auto-rows-\[200px\]) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    will-change: background-position;
 }
 
 .link-underline {
@@ -589,21 +577,13 @@ section:has(.auto-rows-\[200px\]) {
 }
 
 @keyframes rotate-slow {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
 .floral-decoration svg {

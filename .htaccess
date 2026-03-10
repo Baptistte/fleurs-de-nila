@@ -2,7 +2,30 @@
 # Fleurs de Nila — .htaccess Performance & Cache
 # ============================================================
 
-# --- Compression Gzip/Deflate ---
+# --- Redirection non-www → www (canonicalisation domaine) ---
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# --- Redirections 301 — anciens slugs articles ---
+Redirect 301 /article1.html https://www.fleursdenila.fr/entretien-bouquets-fleurs-fraiches.html
+Redirect 301 /article2.html https://www.fleursdenila.fr/decoration-fleurs-sechees-idees.html
+Redirect 301 /article3.html https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html
+
+# --- Keep-Alive ---
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+# --- Compression Brotli (prioritaire si disponible) ---
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml font/ttf font/woff font/woff2 application/font-woff2
+</IfModule>
+
+# --- Compression Gzip/Deflate (fallback) ---
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
     AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/woff font/woff2 application/font-woff2
@@ -13,30 +36,30 @@
     ExpiresActive On
 
     # Images
-    ExpiresByType image/webp  "access plus 1 year"
-    ExpiresByType image/jpeg  "access plus 1 year"
-    ExpiresByType image/png   "access plus 1 year"
-    ExpiresByType image/gif   "access plus 1 year"
+    ExpiresByType image/webp    "access plus 1 year"
+    ExpiresByType image/jpeg    "access plus 1 year"
+    ExpiresByType image/png     "access plus 1 year"
+    ExpiresByType image/gif     "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
 
     # Fonts
-    ExpiresByType font/ttf    "access plus 1 year"
-    ExpiresByType font/woff   "access plus 1 year"
-    ExpiresByType font/woff2  "access plus 1 year"
+    ExpiresByType font/ttf               "access plus 1 year"
+    ExpiresByType font/woff              "access plus 1 year"
+    ExpiresByType font/woff2             "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
 
-    # CSS & JS (versionnés si possible, sinon 1 mois)
+    # CSS & JS
     ExpiresByType text/css               "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType text/javascript        "access plus 1 month"
 
-    # HTML (court pour permettre les mises à jour)
+    # HTML
     ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# Headers de cache explicites (fallback si mod_expires absent)
+# --- Headers cache + sécurité ---
 <IfModule mod_headers.c>
-    # Images et fonts : 1 an
+    # Images et fonts : 1 an immutable
     <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico|ttf|woff|woff2)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
@@ -49,9 +72,11 @@
         Header set Cache-Control "public, max-age=3600"
     </FilesMatch>
 
-    # Sécurité headers de base
+    # Sécurité
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
 # --- MIME types ---
