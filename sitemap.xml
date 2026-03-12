@@ -53,7 +53,7 @@
     <!-- Article 1 : Entretien bouquets -->
     <url>
         <loc>https://www.fleursdenila.fr/entretien-bouquets-fleurs-fraiches.html</loc>
-        <lastmod>2026-02-24</lastmod>
+        <lastmod>2026-03-10</lastmod>
 
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/bouquet-fleurs-fraiches-nimes.webp</image:loc>
@@ -65,7 +65,7 @@
     <!-- Article 2 : Fleurs séchées déco -->
     <url>
         <loc>https://www.fleursdenila.fr/decoration-fleurs-sechees-idees.html</loc>
-        <lastmod>2026-02-24</lastmod>
+        <lastmod>2026-03-10</lastmod>
 
         <image:image>
             <image:loc>https://www.fleursdenila.fr/images/bouquet-fleurs-sechees-decoration-durable-nimes.webp</image:loc>
@@ -110,16 +110,5 @@
         </image:image>
     </url>
 
-    <!-- Mentions légales -->
-    <url>
-        <loc>https://www.fleursdenila.fr/mentions-legales.html</loc>
-        <lastmod>2026-03-10</lastmod>
-    </url>
-
-    <!-- Politique de confidentialité -->
-    <url>
-        <loc>https://www.fleursdenila.fr/politique-confidentialite.html</loc>
-        <lastmod>2026-03-10</lastmod>
-    </url>
 
 </urlset>

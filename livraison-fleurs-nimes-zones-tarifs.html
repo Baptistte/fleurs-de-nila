@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
     <link rel="preload" as="font" href="FleurDeLeah-Regular.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="image" href="images/boutique-fleuriste-nimes-livraison-fleurs.webp" fetchpriority="high">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tailwind.css">
 
@@ -47,7 +52,47 @@
                 "url": "https://www.fleursdenila.fr/images/logo-fleurs-de-nila-nimes.webp"
             }
         },
+        "url": "https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html",
         "mainEntityOfPage": "https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html"
+    }
+    </script>
+
+    <!-- Schema.org - Service Livraison -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html#service",
+        "name": "Livraison de fleurs à Nîmes",
+        "serviceType": "Livraison florale à domicile",
+        "description": "Livraison de bouquets de fleurs fraîches et séchées à domicile à Nîmes et dans l'agglomération nîmoise.",
+        "url": "https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html",
+        "provider": {
+            "@type": ["Florist", "LocalBusiness"],
+            "@id": "https://www.fleursdenila.fr/#florist"
+        },
+        "areaServed": [
+            {"@type": "City", "name": "Nîmes"},
+            {"@type": "City", "name": "Marguerittes"},
+            {"@type": "City", "name": "Milhaud"},
+            {"@type": "City", "name": "Caveirac"},
+            {"@type": "City", "name": "Bouillargues"},
+            {"@type": "City", "name": "Caissargues"},
+            {"@type": "City", "name": "Garons"},
+            {"@type": "City", "name": "Saint-Gilles"},
+            {"@type": "City", "name": "Manduel"},
+            {"@type": "City", "name": "Redessan"},
+            {"@type": "City", "name": "Bernis"},
+            {"@type": "City", "name": "Générac"},
+            {"@type": "City", "name": "Vauvert"}
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "minPrice": "10",
+            "maxPrice": "15",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        }
     }
     </script>
 
@@ -79,7 +124,7 @@
                         width="1013" height="564" class="h-16 sm:h-20 w-auto">
                 </a>
                 <div class="flex-1 flex justify-end">
-                    <button id="mobile-menu-btn" class="text-primary p-1">
+                    <button id="mobile-menu-btn" class="text-primary p-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -106,7 +151,7 @@
                     <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                         rel="noopener noreferrer"
                         class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">Boutique</a>
-                    <a href="index.html#apropos" class="nav-link text-sm lg:text-base xl:text-lg">À propos</a>
+                    <a href="a-propos.html" class="nav-link text-sm lg:text-base xl:text-lg">À propos</a>
                     <a href="blog.html" class="nav-link text-sm lg:text-base xl:text-lg">Blog</a>
                     <a href="index.html#contact" class="nav-link text-sm lg:text-base xl:text-lg">Contact</a>
                 </div>
@@ -130,7 +175,7 @@
             <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                 rel="noopener noreferrer"
                 class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">Boutique</a>
-            <a href="index.html#apropos" class="mobile-nav-link text-6xl">À propos</a>
+            <a href="a-propos.html" class="mobile-nav-link text-6xl">À propos</a>
             <a href="blog.html" class="mobile-nav-link text-6xl">Blog</a>
             <a href="index.html#contact" class="mobile-nav-link text-6xl">Contact</a>
         </div>
@@ -422,7 +467,7 @@
                     </li>
                     <li class="flex items-start gap-3 text-gray-700">
                         <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></span>
-                        <span><strong>Changez l'eau</strong> tous les 2 jours (voir notre <a href="article1.html"
+                        <span><strong>Changez l'eau</strong> tous les 2 jours (voir notre <a href="entretien-bouquets-fleurs-fraiches.html"
                                 class="text-secondary hover:text-primary underline transition-colors">guide complet
                                 d'entretien</a>)</span>
                     </li>
@@ -447,7 +492,7 @@
     <section class="w-full bg-cream border-t border-b border-primary">
         <div class="max-w-4xl mx-auto px-6 lg:px-12 py-10">
             <div class="flex justify-between items-center">
-                <a href="article2.html"
+                <a href="decoration-fleurs-sechees-idees.html"
                     class="text-sm uppercase tracking-widest text-secondary hover:text-primary transition-colors">
                     ← Article précédent
                 </a>

@@ -11,10 +11,13 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
     <link rel="canonical" href="https://www.fleursdenila.fr/blog.html">
-    <link rel="preconnect" href="https://maps.googleapis.com">
-    <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
     <link rel="preload" as="font" href="FleurDeLeah-Regular.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="image" href="images/bouquet-fleurs-fraiches-nimes.webp" fetchpriority="high">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tailwind.css">
 
@@ -30,13 +33,52 @@
         "name": "Blog — Fleurs de Nila",
         "description": "Conseils d'entretien, inspirations florales de saison et idées déco fleurs fraîches et séchées par Fleurs de Nila, fleuriste à Nîmes.",
         "url": "https://www.fleursdenila.fr/blog.html",
+        "dateModified": "2026-03-10",
         "inLanguage": "fr-FR",
         "publisher": {
             "@type": "Organization",
             "@id": "https://www.fleursdenila.fr/#florist",
             "name": "Fleurs de Nila",
             "url": "https://www.fleursdenila.fr"
-        }
+        },
+        "hasPart": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Comment prolonger la tenue de vos bouquets de fleurs fraîches",
+                "url": "https://www.fleursdenila.fr/entretien-bouquets-fleurs-fraiches.html",
+                "datePublished": "2026-01-12",
+                "image": "https://www.fleursdenila.fr/images/bouquet-fleurs-fraiches-nimes.webp",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://www.fleursdenila.fr/#florist",
+                    "name": "Fleurs de Nila"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Fleurs séchées : idées pour une décoration douce et durable",
+                "url": "https://www.fleursdenila.fr/decoration-fleurs-sechees-idees.html",
+                "datePublished": "2026-01-10",
+                "image": "https://www.fleursdenila.fr/images/bouquet-fleurs-sechees-decoration-durable-nimes.webp",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://www.fleursdenila.fr/#florist",
+                    "name": "Fleurs de Nila"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Livraison de fleurs à Nîmes : zones, tarifs et conseils",
+                "url": "https://www.fleursdenila.fr/livraison-fleurs-nimes-zones-tarifs.html",
+                "datePublished": "2026-03-03",
+                "image": "https://www.fleursdenila.fr/images/boutique-fleuriste-nimes-livraison-fleurs.webp",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://www.fleursdenila.fr/#florist",
+                    "name": "Fleurs de Nila"
+                }
+            }
+        ]
     }
     </script>
 
@@ -81,7 +123,7 @@
                 </a>
 
                 <div class="flex-1 flex justify-end">
-                    <button id="mobile-menu-btn" class="text-primary p-1">
+                    <button id="mobile-menu-btn" class="text-primary p-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -111,7 +153,7 @@
                     <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                         rel="noopener noreferrer"
                         class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">Boutique</a>
-                    <a href="index.html#apropos"
+                    <a href="a-propos.html"
                         class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">À
                         propos</a>
                     <a href="blog.html"
@@ -139,7 +181,7 @@
             <a href="https://www.sessile.fr/trouvez-votre-fleuriste/fleurs-de-nila/" target="_blank"
                 rel="noopener noreferrer"
                 class="nav-link text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors">Boutique</a>
-            <a href="index.html#apropos" class="mobile-nav-link text-6xl">À propos</a>
+            <a href="a-propos.html" class="mobile-nav-link text-6xl">À propos</a>
             <a href="blog.html" class="mobile-nav-link text-6xl">Blog</a>
             <a href="index.html#contact" class="mobile-nav-link text-6xl">Contact</a>
         </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-language" content="fr-FR">
+
 
     <!-- Preconnect & Preload pour performances -->
     <link rel="preconnect" href="https://maps.googleapis.com">
@@ -49,9 +49,9 @@
     <meta name="twitter:image" content="https://www.fleursdenila.fr/images/boutique-fleuriste-nimes-livraison-fleurs.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" sizes="32x32" href="images/logo-fleurs-de-nila-nimes.webp">
-    <link rel="icon" type="image/webp" sizes="16x16" href="images/logo-fleurs-de-nila-nimes.webp">
-    <link rel="apple-touch-icon" href="images/logo-fleurs-de-nila-nimes.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
     <!-- Geo Tags pour SEO local France -->
     <meta name="geo.region" content="FR-30">
@@ -69,8 +69,14 @@
         "@id": "https://www.fleursdenila.fr/#florist",
         "name": "Fleurs de Nila",
         "image": "https://www.fleursdenila.fr/images/boutique-fleuriste-nimes-livraison-fleurs.webp",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.fleursdenila.fr/images/logo-fleurs-de-nila-nimes.webp",
+            "width": 1013,
+            "height": 564
+        },
         "url": "https://www.fleursdenila.fr",
-        "telephone": "+33434390429",
+        "telephone": "+33 4 34 39 04 29",
         "email": "fleursdenila@icloud.com",
         "address": {
             "@type": "PostalAddress",
@@ -96,12 +102,6 @@
                 "dayOfWeek": "Sunday",
                 "opens": "10:00",
                 "closes": "13:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Monday",
-                "opens": "00:00",
-                "closes": "00:00"
             }
         ],
         "priceRange": "€€",
@@ -155,7 +155,12 @@
             "@type": "Organization",
             "name": "Fleurs de Nila",
             "url": "https://www.fleursdenila.fr",
-            "logo": "https://www.fleursdenila.fr/images/logo-fleurs-de-nila-nimes.webp"
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.fleursdenila.fr/images/logo-fleurs-de-nila-nimes.webp",
+                "width": 1013,
+                "height": 564
+            }
         }
     }
     </script>
@@ -172,7 +177,7 @@
             "@type": "Florist",
             "name": "Fleurs de Nila",
             "url": "https://www.fleursdenila.fr",
-            "telephone": "+33434390429",
+            "telephone": "+33 4 34 39 04 29",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "3 rue Auguste-Pellet",
@@ -200,7 +205,6 @@
             "@type": "Offer",
             "priceSpecification": {
                 "@type": "PriceSpecification",
-                "price": "10",
                 "minPrice": "10",
                 "maxPrice": "15",
                 "priceCurrency": "EUR"
@@ -239,7 +243,7 @@
                         height="564" class="h-16 sm:h-20 w-auto">
                 </a>
                 <div class="flex-1 flex justify-end">
-                    <button id="mobile-menu-btn" class="text-primary p-1">
+                    <button id="mobile-menu-btn" class="text-primary p-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -869,6 +873,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.8426771644847!2d4.358892476545686!3d43.83595707109657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42c6e79d9e2af%3A0x8e6e8e6e8e6e8e6e!2s3%20Rue%20Auguste%20Pellet%2C%2030000%20N%C3%AEmes%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin"
                 title="Localisation de la boutique Fleurs de Nila - 3 rue Auguste-Pellet, 30000 Nîmes">
             </iframe>
         </div>
@@ -884,7 +889,7 @@
                 <div
                     class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none">
                     <img src="images/bouquet-fleurs-fraiches-nimes.webp" loading="lazy"
-                        alt="" width="675" height="900"
+                        alt="Bouquet de fleurs fraîches de saison — Fleurs de Nila Nîmes" width="675" height="900"
                         class="w-full h-full object-cover"
                         srcset="images/bouquet-fleurs-fraiches-nimes-400w.webp 400w, images/bouquet-fleurs-fraiches-nimes.webp 675w"
                         sizes="(max-width: 768px) 100vw, 50vw">

@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajoute automatiquement la classe .reveal aux éléments clés s'ils ne l'ont pas déjà
     // EXCLUSION des éléments FAQ pour éviter les conflits
     const elementsToAnimate = document.querySelectorAll(
-        'section h2:not(.faq-container h2), section h3:not(.faq-container h3), section p:not(.faq-answer p), .collection-card, article:not(.faq-item), .gallery-item, .bento-cell'
+        'section:not(#accueil) h2:not(.faq-container h2), section:not(#accueil) h3:not(.faq-container h3), section:not(#accueil) p:not(.faq-answer p), .collection-card, article:not(.faq-item), .gallery-item, section:not(#accueil) .bento-cell'
     );
 
     elementsToAnimate.forEach((el) => {
@@ -163,5 +163,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    console.log('🌸 Fleurs de Nila — Animations chargées');
 });
