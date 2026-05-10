@@ -278,9 +278,11 @@ section:has(.auto-rows-\[200px\]) {
    Bandeau bleu (marquee) - Mobile friendly
    ======================================== */
 .top-marquee {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 0.7rem;
+    margin-top: 22px;
+    margin-bottom: 22px;
 }
 
 @media (max-width: 640px) {
@@ -447,10 +449,6 @@ section:has(.auto-rows-\[200px\]) {
 }
 
 /* Espacement interne des sections */
-#collections > div:first-child {
-    padding-top: 4rem;
-}
-
 #collections > div:last-child {
     padding-bottom: 4rem;
 }
